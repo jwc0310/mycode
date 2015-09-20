@@ -64,4 +64,13 @@
         android:layout_below="@+id/auto"
         android:text="Data/Timer" />
 
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/data"
+        android:layout_below="@+id/data"
+        android:text="exit" />
+
 </RelativeLayout>
