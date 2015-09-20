@@ -55,4 +55,13 @@
         android:layout_below="@+id/spinner"
         android:text="auto" />
 
+    <Button
+        android:id="@+id/data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/auto"
+        android:layout_below="@+id/auto"
+        android:text="Data/Timer" />
+
 </RelativeLayout>

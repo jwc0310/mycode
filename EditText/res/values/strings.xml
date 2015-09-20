@@ -3,5 +3,6 @@
 
     <string name="app_name">EditText</string>
     <string name="hello_world">Hello world!</string>
+    <string name="date_title">Example DatePicker、TimePicker.</string>
 
 </resources>

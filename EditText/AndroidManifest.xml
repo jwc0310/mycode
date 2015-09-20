@@ -27,6 +27,7 @@
         <activity android:name="learnCheckBox"></activity>
         <activity android:name="learnSpinner"></activity>
         <activity android:name="auto"></activity>
+        <activity android:name="date"></activity>
         
     </application>
 
