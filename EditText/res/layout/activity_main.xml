@@ -56,21 +56,28 @@
         android:text="auto" />
 
     <Button
-        android:id="@+id/data"
+        android:id="@+id/menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/auto"
         android:layout_below="@+id/auto"
-        android:text="Data/Timer" />
+        android:text="menu" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/menu"
+        android:layout_marginTop="15dp"
+        android:text="date" />
 
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/data"
-        android:layout_below="@+id/data"
+        android:layout_below="@+id/date"
         android:text="exit" />
 
 </RelativeLayout>

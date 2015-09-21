@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 	private TextView tv1;
 	private EditText et1;
 	private Button radio,checkbox,spin,auto,data;
-	private Button exit;
+	private Button exit,menu;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
         checkbox = (Button)findViewById(R.id.checkbox);
         spin = (Button)findViewById(R.id.spinner);
         auto = (Button)findViewById(R.id.auto);
-        data = (Button)findViewById(R.id.data);
+        data = (Button)findViewById(R.id.date);
         exit = (Button)findViewById(R.id.exit);
         
         radio.setOnClickListener(button);
@@ -123,7 +123,7 @@ public class MainActivity extends Activity {
 				startActivity(toAuto);
 				MainActivity.this.finish();
 				break;
-			case R.id.data:
+			case R.id.date:
 				Intent toData = new Intent();
 				toData.setClass(MainActivity.this, date.class);
 				startActivity(toData);
