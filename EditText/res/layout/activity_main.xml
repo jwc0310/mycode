@@ -60,24 +60,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/auto"
         android:layout_below="@+id/auto"
         android:text="menu" />
-
-    <Button
-        android:id="@+id/date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/menu"
-        android:layout_marginTop="15dp"
-        android:text="date" />
 
     <Button
         android:id="@+id/exit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/date"
         android:layout_below="@+id/date"
         android:text="exit" />
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/menu"
+        android:layout_below="@+id/menu"
+        android:text="date" />
+
+    <Button
+        android:id="@+id/dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/exit"
+        android:layout_below="@+id/exit"
+        android:text="Dialog" />
 
 </RelativeLayout>

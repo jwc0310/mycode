@@ -30,6 +30,7 @@
         <activity android:name="date"></activity>
         <activity android:name="menu"></activity>
         <activity android:name="menu1"></activity>
+        <activity android:name="LearnDialog"></activity>
         
     </application>
 
