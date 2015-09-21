@@ -37,6 +37,8 @@ public class MainActivity extends Activity {
         auto = (Button)findViewById(R.id.auto);
         data = (Button)findViewById(R.id.date);
         exit = (Button)findViewById(R.id.exit);
+        menu = (Button)findViewById(R.id.menu);
+        
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -44,6 +46,7 @@ public class MainActivity extends Activity {
         auto.setOnClickListener(button);
         data.setOnClickListener(button);
         exit.setOnClickListener(button);
+        menu.setOnClickListener(button);
         
         
         
@@ -132,7 +135,12 @@ public class MainActivity extends Activity {
 			case R.id.exit:
 				MainActivity.this.finish();
 				break;
-				
+			case R.id.menu:
+				Intent toMenu = new Intent();
+				toMenu.setClass(MainActivity.this, menu.class);
+				startActivity(toMenu);
+				MainActivity.this.finish();
+				break;
 			default:
 				break;
 			}

@@ -28,6 +28,8 @@
         <activity android:name="learnSpinner"></activity>
         <activity android:name="auto"></activity>
         <activity android:name="date"></activity>
+        <activity android:name="menu"></activity>
+        <activity android:name="menu1"></activity>
         
     </application>
 
