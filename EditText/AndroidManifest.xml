@@ -34,6 +34,7 @@
         <activity android:name="LearnImagebutton"></activity>
         <activity android:name="gallery"></activity>
         <activity android:name="imageSwitcher"></activity>
+        <activity android:name="gridView"></activity>
         
     </application>
 

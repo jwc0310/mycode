@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 	private EditText et1;
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
-	private Button gallery,switcher;
+	private Button gallery,switcher,grid;
 	
 	
     @Override
@@ -44,6 +44,7 @@ public class MainActivity extends Activity {
         imageButton = (Button)findViewById(R.id.imageButton);
         gallery = (Button)findViewById(R.id.gallery);
         switcher = (Button)findViewById(R.id.switcher);
+        grid = (Button)findViewById(R.id.gridView01);
         
         
         radio.setOnClickListener(button);
@@ -57,6 +58,7 @@ public class MainActivity extends Activity {
         imageButton.setOnClickListener(button);
         gallery.setOnClickListener(button);
         switcher.setOnClickListener(button);
+        grid.setOnClickListener(button);
         
         
         
@@ -182,7 +184,13 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 				
 				break;
+			case R.id.gridView01:
+				Intent toGrid = new Intent();
+				toGrid.setClass(MainActivity.this, gridView.class);
+				startActivity(toGrid);
+				MainActivity.this.finish();
 				
+				break;
 				
 			default:
 				break;

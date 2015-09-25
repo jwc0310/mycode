@@ -158,6 +158,15 @@
 		        android:layout_below="@+id/gallery"
 		        android:text="ImSwitcher" />
 
+		    <Button
+		        android:id="@+id/gridView01"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/switcher"
+		        android:layout_below="@+id/switcher"
+		        android:text="GridView" />
+
     	</RelativeLayout>
     
     </RelativeLayout>
