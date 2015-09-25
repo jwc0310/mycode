@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
 	private EditText et1;
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
+	private Button gallery;
 	
 	
     @Override
@@ -41,6 +42,7 @@ public class MainActivity extends Activity {
         menu = (Button)findViewById(R.id.menu);
         dialog = (Button)findViewById(R.id.dialog);
         imageButton = (Button)findViewById(R.id.imageButton);
+        gallery = (Button)findViewById(R.id.gallery);
         
         
         radio.setOnClickListener(button);
@@ -52,6 +54,7 @@ public class MainActivity extends Activity {
         menu.setOnClickListener(button);
         dialog.setOnClickListener(button);
         imageButton.setOnClickListener(button);
+        gallery.setOnClickListener(button);
         
         
         
@@ -162,6 +165,13 @@ public class MainActivity extends Activity {
 				
 				break;
 				
+			case R.id.gallery:
+				Intent togallery = new Intent();
+				togallery.setClass(MainActivity.this, gallery.class);
+				startActivity(togallery);
+				MainActivity.this.finish();
+				
+				break;
 				
 				
 			default:

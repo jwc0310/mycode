@@ -140,6 +140,15 @@
 		        android:layout_alignParentTop="true"
 		        android:text="imageButton" />
 
+		    <Button
+		        android:id="@+id/gallery"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/imageButton"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/imageButton"
+		        android:text="Gallery" />
+
     	</RelativeLayout>
     
     </RelativeLayout>
