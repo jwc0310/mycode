@@ -33,6 +33,7 @@
         <activity android:name="LearnDialog"></activity>
         <activity android:name="LearnImagebutton"></activity>
         <activity android:name="gallery"></activity>
+        <activity android:name="imageSwitcher"></activity>
         
     </application>
 

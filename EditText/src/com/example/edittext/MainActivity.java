@@ -21,7 +21,7 @@ public class MainActivity extends Activity {
 	private EditText et1;
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
-	private Button gallery;
+	private Button gallery,switcher;
 	
 	
     @Override
@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
         dialog = (Button)findViewById(R.id.dialog);
         imageButton = (Button)findViewById(R.id.imageButton);
         gallery = (Button)findViewById(R.id.gallery);
+        switcher = (Button)findViewById(R.id.switcher);
         
         
         radio.setOnClickListener(button);
@@ -55,6 +56,7 @@ public class MainActivity extends Activity {
         dialog.setOnClickListener(button);
         imageButton.setOnClickListener(button);
         gallery.setOnClickListener(button);
+        switcher.setOnClickListener(button);
         
         
         
@@ -169,6 +171,14 @@ public class MainActivity extends Activity {
 				Intent togallery = new Intent();
 				togallery.setClass(MainActivity.this, gallery.class);
 				startActivity(togallery);
+				MainActivity.this.finish();
+				
+				break;
+				
+			case R.id.switcher:
+				Intent toswitcher = new Intent();
+				toswitcher.setClass(MainActivity.this, imageSwitcher.class);
+				startActivity(toswitcher);
 				MainActivity.this.finish();
 				
 				break;

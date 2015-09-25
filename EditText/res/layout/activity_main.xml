@@ -149,6 +149,15 @@
 		        android:layout_alignRight="@+id/imageButton"
 		        android:text="Gallery" />
 
+		    <Button
+		        android:id="@+id/switcher"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/gallery"
+		        android:layout_below="@+id/gallery"
+		        android:text="ImSwitcher" />
+
     	</RelativeLayout>
     
     </RelativeLayout>
