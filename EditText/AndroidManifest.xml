@@ -38,6 +38,8 @@
         <activity android:name="scroll"></activity>
         <activity android:name="Probar"></activity>
         <activity android:name="Seek"></activity>
+        <activity android:name="Notify"></activity>
+        <activity android:name="Notify2"></activity>
         
     </application>
 

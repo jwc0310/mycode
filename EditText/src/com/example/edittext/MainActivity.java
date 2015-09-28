@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
-	private Button proBar,seekBar;
+	private Button proBar,seekBar,notify;
 	
 	
     @Override
@@ -49,6 +49,7 @@ public class MainActivity extends Activity {
         scroll = (Button)findViewById(R.id.scrollView);
         proBar = (Button)findViewById(R.id.ProgressBar);
         seekBar = (Button)findViewById(R.id.SeekBar);
+        notify = (Button)findViewById(R.id.Notify);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -65,6 +66,7 @@ public class MainActivity extends Activity {
         scroll.setOnClickListener(button);
         proBar.setOnClickListener(button);
         seekBar.setOnClickListener(button);
+        notify.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -216,6 +218,13 @@ public class MainActivity extends Activity {
 				Intent toSeek = new Intent();
 				toSeek.setClass(MainActivity.this, Seek.class);
 				startActivity(toSeek);
+				MainActivity.this.finish();
+				break;
+				
+			case R.id.Notify:
+				Intent toNotify = new Intent();
+				toNotify.setClass(MainActivity.this, Notify.class);
+				startActivity(toNotify);
 				MainActivity.this.finish();
 				break;
 				
