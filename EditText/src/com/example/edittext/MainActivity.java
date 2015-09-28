@@ -22,6 +22,7 @@ public class MainActivity extends Activity {
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
+	private Button proBar;
 	
 	
     @Override
@@ -46,7 +47,7 @@ public class MainActivity extends Activity {
         switcher = (Button)findViewById(R.id.switcher);
         grid = (Button)findViewById(R.id.gridView01);
         scroll = (Button)findViewById(R.id.scrollView);
-        
+        proBar = (Button)findViewById(R.id.ProgressBar);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -61,7 +62,7 @@ public class MainActivity extends Activity {
         switcher.setOnClickListener(button);
         grid.setOnClickListener(button);
         scroll.setOnClickListener(button);
-        
+        proBar.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -201,6 +202,16 @@ public class MainActivity extends Activity {
 				MainActivity.this.finish();
 				
 				break;
+				
+			case R.id.ProgressBar:
+				Intent toPro = new Intent();
+				toPro.setClass(MainActivity.this, Probar.class);
+				startActivity(toPro);
+				MainActivity.this.finish();
+				
+				break;
+				
+				
 				
 			default:
 				break;

@@ -169,13 +169,22 @@
 
 		    <Button
 		        android:id="@+id/scrollView"
-		        style="?android:attr/buttonStyleSmall"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/gridView01"
 		        android:layout_below="@+id/gridView01"
 		        android:text="ScrollView" />
+		    
+		    <Button
+		        android:id="@+id/ProgressBar"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/scrollView"
+		        android:layout_below="@+id/scrollView"
+		        android:text="ProgressBar" />
+		    
 
     	</RelativeLayout>
     

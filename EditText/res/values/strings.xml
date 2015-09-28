@@ -6,5 +6,6 @@
     <string name="date_title">Example DatePicker、TimePicker.</string>
     <string name="ok">确定</string>
     <string name="back">返回</string>
+    <string name="hello">hello</string>
 
 </resources>
