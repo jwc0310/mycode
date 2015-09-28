@@ -37,14 +37,13 @@
        
     </RelativeLayout>
     
-    <RelativeLayout 
+    <RelativeLayout
+        android:id="@+id/rl02"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="horizontal" 
-        android:id="@+id/rl02"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/rl0"
-        >
-    
+        android:orientation="horizontal" >
 
 	    <RelativeLayout 
 	        android:layout_width="wrap_content"
@@ -185,6 +184,14 @@
 		        android:layout_below="@+id/scrollView"
 		        android:text="ProgressBar" />
 		    
+		    <Button
+		        android:id="@+id/SeekBar"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/ProgressBar"
+		        android:layout_below="@+id/ProgressBar"
+		        android:text="SeekBar" />
 
     	</RelativeLayout>
     

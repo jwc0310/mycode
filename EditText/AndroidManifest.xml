@@ -37,6 +37,7 @@
         <activity android:name="gridView"></activity>
         <activity android:name="scroll"></activity>
         <activity android:name="Probar"></activity>
+        <activity android:name="Seek"></activity>
         
     </application>
 
