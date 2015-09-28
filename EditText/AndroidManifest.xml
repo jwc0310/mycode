@@ -35,6 +35,7 @@
         <activity android:name="gallery"></activity>
         <activity android:name="imageSwitcher"></activity>
         <activity android:name="gridView"></activity>
+        <activity android:name="scroll"></activity>
         
     </application>
 
