@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,7 +24,7 @@ public class MainActivity extends Activity {
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
-	
+	private Button get;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +52,7 @@ public class MainActivity extends Activity {
         seekBar = (Button)findViewById(R.id.SeekBar);
         notify = (Button)findViewById(R.id.Notify);
         proDia = (Button)findViewById(R.id.button1);
+        get = (Button)findViewById(R.id.get);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -69,6 +71,7 @@ public class MainActivity extends Activity {
         seekBar.setOnClickListener(button);
         notify.setOnClickListener(button);
         proDia.setOnClickListener(button);
+        get.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -229,10 +232,20 @@ public class MainActivity extends Activity {
 				startActivity(toNotify);
 				MainActivity.this.finish();
 				break;
+				
 			case R.id.button1:
+				Log.i("Andy", "button1");
 				Intent toB = new Intent();
 				toB.setClass(MainActivity.this, ProDia.class);
 				startActivity(toB);
+				MainActivity.this.finish();
+				break;
+				
+			case R.id.get:
+				Log.i("Andy", "get");
+				Intent toGet = new Intent();
+				toGet.setClass(MainActivity.this, get.class);
+				startActivity(toGet);
 				MainActivity.this.finish();
 			default:
 				break;
