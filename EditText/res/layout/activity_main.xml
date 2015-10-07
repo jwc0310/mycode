@@ -58,7 +58,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_alignParentLeft="true"
-	        android:text="RadioButton" />
+	        android:text="RadioBut" />
 	
 		    <Button
 		        android:id="@+id/checkbox"
@@ -67,7 +67,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/Radio"
 		        android:layout_below="@+id/Radio"
-		        android:text="CheckBox" />
+		        android:text="ChkBox" />
 	
 		    <Button
 		        android:id="@+id/spinner"
@@ -130,7 +130,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@id/dialog"
 		        android:layout_below="@id/dialog"
-		        android:text="ProDialog" />
+		        android:text="ProDlg" />
 	        
 	
 	    	</RelativeLayout>
@@ -148,7 +148,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignParentTop="true"
-		        android:text="imageButton" />
+		        android:text="ImageBut" />
 
 		    <Button
 		        android:id="@+id/gallery"
@@ -166,7 +166,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/gallery"
 		        android:layout_below="@+id/gallery"
-		        android:text="ImSwitcher" />
+		        android:text="ImSwiher" />
 
 		    <Button
 		        android:id="@+id/gridView01"
@@ -184,7 +184,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/gridView01"
 		        android:layout_below="@+id/gridView01"
-		        android:text="ScrollView" />
+		        android:text="ScrollVi" />
 		    
 		    <Button
 		        android:id="@+id/ProgressBar"
@@ -193,7 +193,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/scrollView"
 		        android:layout_below="@+id/scrollView"
-		        android:text="ProgressBar" />
+		        android:text="ProBar" />
 		    
 		    <Button
 		        android:id="@+id/SeekBar"
@@ -219,12 +219,17 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/Notify"
 		        android:layout_below="@+id/Notify"
-		        android:text="GetScrSize" />
+		        android:text="GetSize" />
 
     	</RelativeLayout>
 
     
     </RelativeLayout>
+    
+    
+    
+    
+    
     
 
 </RelativeLayout>
