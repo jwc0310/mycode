@@ -136,6 +136,7 @@
 	    	</RelativeLayout>
     
 	    <RelativeLayout 
+	        android:id="@+id/column2"
 	        android:layout_width="wrap_content"
 	        android:layout_height="fill_parent"
 	        android:orientation="vertical" 
@@ -222,7 +223,19 @@
 		        android:text="GetSize" />
 
     	</RelativeLayout>
-
+		<RelativeLayout
+		    android:id="@+id/column3"
+		    android:layout_width="wrap_content"
+		    android:layout_height="fill_parent"
+		    android:layout_toRightOf="@+id/column2"
+		    >
+		    <Button
+		        android:id="@+id/tableLayout"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="tabLayout"
+		         />
+		</RelativeLayout>
     
     </RelativeLayout>
     
