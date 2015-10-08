@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
-	private Button get,tab;
+	private Button get,tab,tabwid;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class MainActivity extends Activity {
         proDia = (Button)findViewById(R.id.button1);
         get = (Button)findViewById(R.id.get);
         tab = (Button)findViewById(R.id.tableLayout);
+        tabwid = (Button)findViewById(R.id.tabWidget);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -74,6 +75,7 @@ public class MainActivity extends Activity {
         proDia.setOnClickListener(button);
         get.setOnClickListener(button);
         tab.setOnClickListener(button);
+        tabwid.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -255,6 +257,13 @@ public class MainActivity extends Activity {
 				Intent toTab = new Intent();
 				toTab.setClass(MainActivity.this, TabLayout.class);
 				startActivity(toTab);
+				MainActivity.this.finish();
+				
+			case R.id.tabWidget:
+				Log.i("Andy", "tabWidget");
+				Intent toTabW = new Intent();
+				toTabW.setClass(MainActivity.this, TabWid.class);
+				startActivity(toTabW);
 				MainActivity.this.finish();
 				
 			default:

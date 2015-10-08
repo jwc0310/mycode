@@ -235,6 +235,16 @@
 		        android:layout_height="wrap_content"
 		        android:text="tabLayout"
 		         />
+
+		    <Button
+		        android:id="@+id/tabWidget"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/tableLayout"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/tableLayout"
+		        android:text="tabWidgt" />
+
 		</RelativeLayout>
     
     </RelativeLayout>
