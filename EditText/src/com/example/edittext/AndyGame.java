@@ -1,5 +1,6 @@
 package com.example.edittext;
 
+import com.example.game.GameSurViewActivity;
 import com.example.game.GameViewActivity;
 
 import android.app.Activity;
@@ -12,7 +13,7 @@ import android.widget.Button;
 
 public class AndyGame extends Activity {
 	
-	private Button gameView;
+	private Button gameView,gameSurface;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -26,6 +27,10 @@ public class AndyGame extends Activity {
 		gameView = (Button)findViewById(R.id.gameview);
 		gameView.setOnClickListener(buttonEvent);
 		
+		gameSurface = (Button)findViewById(R.id.gamesurfaceview);
+		gameSurface.setOnClickListener(buttonEvent);
+		
+		
 	}
 	
 	OnClickListener buttonEvent = new OnClickListener(){
@@ -38,6 +43,10 @@ public class AndyGame extends Activity {
 				Intent toGameView = new Intent(AndyGame.this,GameViewActivity.class);
 				startActivity(toGameView);
 				//AndyGame.this.finish();
+				break;
+			case R.id.gamesurfaceview:
+				Intent toGameSur = new Intent(AndyGame.this,GameSurViewActivity.class);
+				startActivity(toGameSur);
 				break;
 			default:
 				Log.i("Andy", "default");
