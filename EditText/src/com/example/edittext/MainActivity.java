@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
-	private Button get,tab,tabwid;
+	private Button get,tab,tabwid,chapter;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +55,7 @@ public class MainActivity extends Activity {
         get = (Button)findViewById(R.id.get);
         tab = (Button)findViewById(R.id.tableLayout);
         tabwid = (Button)findViewById(R.id.tabWidget);
+        chapter = (Button)findViewById(R.id.chapter5);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -76,6 +77,7 @@ public class MainActivity extends Activity {
         get.setOnClickListener(button);
         tab.setOnClickListener(button);
         tabwid.setOnClickListener(button);
+        chapter.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -264,6 +266,13 @@ public class MainActivity extends Activity {
 				Intent toTabW = new Intent();
 				toTabW.setClass(MainActivity.this, TabWid.class);
 				startActivity(toTabW);
+				MainActivity.this.finish();
+				
+			case R.id.chapter5:
+				Log.i("Andy", "tabWidget");
+				Intent toNext = new Intent();
+				toNext.setClass(MainActivity.this, AndyGame.class);
+				startActivity(toNext);
 				MainActivity.this.finish();
 				
 			default:

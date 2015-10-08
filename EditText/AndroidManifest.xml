@@ -44,6 +44,7 @@
         <activity android:name="get"></activity>
         <activity android:name="TabLayout"></activity>
         <activity android:name="TabWid"></activity>
+        <activity android:name="AndyGame"></activity>
         
     </application>
 
