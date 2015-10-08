@@ -37,7 +37,7 @@ public class AndyGame extends Activity {
 			case R.id.gameview:
 				Intent toGameView = new Intent(AndyGame.this,GameViewActivity.class);
 				startActivity(toGameView);
-				AndyGame.this.finish();
+				//AndyGame.this.finish();
 				break;
 			default:
 				Log.i("Andy", "default");

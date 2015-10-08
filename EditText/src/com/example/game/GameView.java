@@ -26,7 +26,7 @@ public class GameView extends View{
 			miCount = 0;
 		}
 		
-		Log.i("Andy", Integer.toString(miCount));
+		//Log.i("Andy", Integer.toString(miCount));
 		//»æÍ¼
 		Paint mPaint = new Paint();
 		
