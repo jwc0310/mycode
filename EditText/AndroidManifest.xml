@@ -23,6 +23,11 @@
             </intent-filter>
         </activity>
         
+        <activity android:name="com.example.game.GameViewActivity"></activity>
+        
+        
+        
+        
         <activity android:name="LearnRadioButton"></activity>
         <activity android:name="learnCheckBox"></activity>
         <activity android:name="learnSpinner"></activity>
@@ -45,6 +50,10 @@
         <activity android:name="TabLayout"></activity>
         <activity android:name="TabWid"></activity>
         <activity android:name="AndyGame"></activity>
+        
+        
+        
+        
         
     </application>
 
