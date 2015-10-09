@@ -7,5 +7,6 @@
     <string name="ok">确定</string>
     <string name="back">返回</string>
     <string name="hello">hello</string>
+    <string name="action_setttings">Settings</string>
 
 </resources>

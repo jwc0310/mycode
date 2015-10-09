@@ -2,6 +2,7 @@ package com.example.edittext;
 
 import com.example.game.GameSurViewActivity;
 import com.example.game.GameViewActivity;
+import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +14,7 @@ import android.widget.Button;
 
 public class AndyGame extends Activity {
 	
-	private Button gameView,gameSurface;
+	private Button gameView,gameSurface,tab;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -29,6 +30,9 @@ public class AndyGame extends Activity {
 		
 		gameSurface = (Button)findViewById(R.id.gamesurfaceview);
 		gameSurface.setOnClickListener(buttonEvent);
+		
+		tab = (Button)findViewById(R.id.tablearn);
+		tab.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -48,6 +52,11 @@ public class AndyGame extends Activity {
 				Intent toGameSur = new Intent(AndyGame.this,GameSurViewActivity.class);
 				startActivity(toGameSur);
 				break;
+			case R.id.tablearn:
+				Intent toTab = new Intent(AndyGame.this,MainTabActivity.class);
+				startActivity(toTab);
+				break;	
+			
 			default:
 				Log.i("Andy", "default");
 				break;
