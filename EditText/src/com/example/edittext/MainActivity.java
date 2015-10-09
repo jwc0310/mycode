@@ -252,28 +252,28 @@ public class MainActivity extends Activity {
 				Intent toGet = new Intent();
 				toGet.setClass(MainActivity.this, get.class);
 				startActivity(toGet);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				
 			case R.id.tableLayout:
 				Log.i("Andy", "tab");
 				Intent toTab = new Intent();
 				toTab.setClass(MainActivity.this, TabLayout.class);
 				startActivity(toTab);
-				MainActivity.this.finish();
-				
+				//MainActivity.this.finish();
+				break;
 			case R.id.tabWidget:
 				Log.i("Andy", "tabWidget");
 				Intent toTabW = new Intent();
 				toTabW.setClass(MainActivity.this, TabWid.class);
 				startActivity(toTabW);
-				MainActivity.this.finish();
-				
+				//MainActivity.this.finish();
+				break;
 			case R.id.chapter5:
 				Log.i("Andy", "tabWidget");
 				Intent toNext = new Intent();
 				toNext.setClass(MainActivity.this, AndyGame.class);
 				startActivity(toNext);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				
 			default:
 				break;
