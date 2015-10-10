@@ -10,6 +10,15 @@ package com.example.edittext;
 public final class R {
     public static final class attr {
     }
+    public static final class color {
+        public static final int pie_button_bg=0x7f040000;
+        public static final int pie_button_pressed=0x7f040001;
+    }
+    public static final class dimen {
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int pie_button_item_size=0x7f050002;
+    }
     public static final class drawable {
         public static final int b=0x7f020000;
         public static final int background=0x7f020001;
@@ -21,247 +30,151 @@ public final class R {
         public static final int ic_menu_all_contacts_dk=0x7f020007;
         public static final int ic_vm_sound_off_dk=0x7f020008;
         public static final int ic_vm_sound_on_dk=0x7f020009;
-<<<<<<< HEAD
-        public static final int rb_blue_bg=0x7f02000a;
+        public static final int main_icon_file=0x7f02000a;
+        public static final int main_icon_live=0x7f02000b;
+        public static final int main_icon_manager=0x7f02000c;
+        public static final int main_icon_setting=0x7f02000d;
+        public static final int rb_blue_bg=0x7f02000e;
     }
     public static final class id {
-        public static final int Button01=0x7f070048;
-        public static final int Button02=0x7f070049;
-        public static final int Notify=0x7f070017;
-        public static final int ProgressBar=0x7f070015;
-        public static final int ProgressBar01=0x7f070046;
-        public static final int ProgressBar02=0x7f070047;
-        public static final int Radio=0x7f070006;
-        public static final int RadioButton1=0x7f07004b;
-        public static final int RadioButton2=0x7f07004c;
-        public static final int RadioButton3=0x7f07004d;
-        public static final int RadioButton4=0x7f07004e;
-        public static final int RadioGroup1=0x7f07004a;
-        public static final int SeekBar=0x7f070016;
-        public static final int TextView1=0x7f070020;
-        public static final int about=0x7f07005b;
-        public static final int action_settings=0x7f07005c;
-        public static final int auto=0x7f070009;
-        public static final int autoC=0x7f070021;
-        public static final int autoM=0x7f070022;
-        public static final int back=0x7f070023;
-        public static final int bt_click=0x7f070032;
-        public static final int button01=0x7f070056;
-        public static final int button1=0x7f07000e;
-        public static final int button2=0x7f070034;
-        public static final int button3=0x7f070043;
-        public static final int button4=0x7f070044;
-        public static final int button5=0x7f070045;
-        public static final int chapter5=0x7f07001c;
-        public static final int checkBox1=0x7f070024;
-        public static final int checkBox2=0x7f070025;
-        public static final int checkBox3=0x7f070026;
-        public static final int checkBox4=0x7f070027;
-        public static final int checkbox=0x7f070007;
-        public static final int click=0x7f070052;
-        public static final int column2=0x7f07000f;
-        public static final int column3=0x7f070019;
-        public static final int date=0x7f07000c;
-        public static final int datePicker=0x7f07002b;
-        public static final int dialog=0x7f07000d;
-        public static final int dm=0x7f070029;
-        public static final int editText=0x7f07002d;
-        public static final int editText1=0x7f070003;
-        public static final int editText2=0x7f07002f;
-        public static final int exit=0x7f07000b;
-        public static final int gallery=0x7f070011;
-        public static final int gallery1=0x7f070033;
-=======
-    }
-    public static final class id {
-        public static final int Button01=0x7f07003c;
-        public static final int Button02=0x7f07003d;
-        public static final int Notify=0x7f070017;
-        public static final int ProgressBar=0x7f070015;
-        public static final int ProgressBar01=0x7f07003a;
-        public static final int ProgressBar02=0x7f07003b;
-        public static final int Radio=0x7f070006;
-        public static final int RadioButton1=0x7f07003f;
-        public static final int RadioButton2=0x7f070040;
-        public static final int RadioButton3=0x7f070041;
-        public static final int RadioButton4=0x7f070042;
-        public static final int RadioGroup1=0x7f07003e;
-        public static final int SeekBar=0x7f070016;
-        public static final int TextView1=0x7f07001f;
-        public static final int about=0x7f07004f;
-        public static final int auto=0x7f070009;
-        public static final int autoC=0x7f070020;
-        public static final int autoM=0x7f070021;
-        public static final int back=0x7f070022;
-        public static final int button01=0x7f07004a;
-        public static final int button1=0x7f07000e;
-        public static final int button2=0x7f070030;
-        public static final int button3=0x7f070037;
-        public static final int button4=0x7f070038;
-        public static final int button5=0x7f070039;
-        public static final int chapter5=0x7f07001c;
-        public static final int checkBox1=0x7f070023;
-        public static final int checkBox2=0x7f070024;
-        public static final int checkBox3=0x7f070025;
-        public static final int checkBox4=0x7f070026;
-        public static final int checkbox=0x7f070007;
-        public static final int click=0x7f070046;
-        public static final int column2=0x7f07000f;
-        public static final int column3=0x7f070019;
-        public static final int date=0x7f07000c;
-        public static final int datePicker=0x7f07002a;
-        public static final int dialog=0x7f07000d;
-        public static final int dm=0x7f070028;
-        public static final int editText=0x7f07002c;
-        public static final int editText1=0x7f070003;
-        public static final int editText2=0x7f07002e;
-        public static final int exit=0x7f07000b;
-        public static final int gallery=0x7f070011;
-        public static final int gallery1=0x7f07002f;
->>>>>>> c4bbe169d1315521d0acba259765f72c929a3556
-        public static final int gamesurfaceview=0x7f07001e;
-        public static final int gameview=0x7f07001d;
-        public static final int get=0x7f070018;
-        public static final int gridView01=0x7f070013;
-<<<<<<< HEAD
-        public static final int gridview=0x7f070035;
-        public static final int ib1=0x7f070037;
-        public static final int ib2=0x7f070038;
-        public static final int ib3=0x7f070039;
-        public static final int ib4=0x7f07003a;
-        public static final int imageButton=0x7f070010;
-        public static final int imageView1=0x7f070036;
-        public static final int iv_nav_indicator=0x7f07003f;
-        public static final int iv_nav_left=0x7f070040;
-        public static final int iv_nav_right=0x7f070041;
-        public static final int ll1=0x7f070050;
-        public static final int mHsv=0x7f07003c;
-        public static final int mViewPager=0x7f070042;
-        public static final int menu=0x7f07000a;
-        public static final int progress=0x7f070054;
-        public static final int rg_nav_content=0x7f07003e;
-=======
-        public static final int gridview=0x7f070031;
-        public static final int ib1=0x7f070033;
-        public static final int ib2=0x7f070034;
-        public static final int ib3=0x7f070035;
-        public static final int ib4=0x7f070036;
-        public static final int imageButton=0x7f070010;
-        public static final int imageView1=0x7f070032;
-        public static final int ll1=0x7f070044;
-        public static final int menu=0x7f07000a;
-        public static final int progress=0x7f070048;
->>>>>>> c4bbe169d1315521d0acba259765f72c929a3556
-        public static final int rl0=0x7f070000;
-        public static final int rl02=0x7f070004;
-        public static final int rl1=0x7f070001;
-        public static final int rl2=0x7f070005;
-<<<<<<< HEAD
-        public static final int rl_nav=0x7f07003d;
-        public static final int rl_tab=0x7f07003b;
-        public static final int scrollView=0x7f070014;
-        public static final int seek=0x7f070053;
-        public static final int spinner=0x7f070008;
-        public static final int spinner1=0x7f070057;
-        public static final int submit=0x7f070028;
-        public static final int sv1=0x7f07004f;
-        public static final int switcher=0x7f070012;
-        public static final int tabWidget=0x7f07001b;
-        public static final int tableLayout=0x7f07001a;
-        public static final int tablearn=0x7f07001f;
-        public static final int textView1=0x7f070002;
-        public static final int textView2=0x7f07002e;
-        public static final int timePicker=0x7f07002c;
-        public static final int tm=0x7f07002a;
-        public static final int tracking=0x7f070055;
-        public static final int tv01=0x7f070051;
-        public static final int tv1=0x7f070058;
-        public static final int tv2=0x7f070059;
-        public static final int tv3=0x7f07005a;
-        public static final int tv_intro=0x7f070031;
-        public static final int tv_tabName=0x7f070030;
-=======
-        public static final int scrollView=0x7f070014;
-        public static final int seek=0x7f070047;
-        public static final int spinner=0x7f070008;
-        public static final int spinner1=0x7f07004b;
-        public static final int submit=0x7f070027;
-        public static final int sv1=0x7f070043;
-        public static final int switcher=0x7f070012;
-        public static final int tabWidget=0x7f07001b;
-        public static final int tableLayout=0x7f07001a;
-        public static final int textView1=0x7f070002;
-        public static final int textView2=0x7f07002d;
-        public static final int timePicker=0x7f07002b;
-        public static final int tm=0x7f070029;
-        public static final int tracking=0x7f070049;
-        public static final int tv01=0x7f070045;
-        public static final int tv1=0x7f07004c;
-        public static final int tv2=0x7f07004d;
-        public static final int tv3=0x7f07004e;
->>>>>>> c4bbe169d1315521d0acba259765f72c929a3556
+        public static final int Button01=0x7f09004a;
+        public static final int Button02=0x7f09004b;
+        public static final int Notify=0x7f090018;
+        public static final int ProgressBar=0x7f090016;
+        public static final int ProgressBar01=0x7f090048;
+        public static final int ProgressBar02=0x7f090049;
+        public static final int Radio=0x7f090007;
+        public static final int RadioButton1=0x7f09004d;
+        public static final int RadioButton2=0x7f09004e;
+        public static final int RadioButton3=0x7f09004f;
+        public static final int RadioButton4=0x7f090050;
+        public static final int RadioGroup1=0x7f09004c;
+        public static final int SeekBar=0x7f090017;
+        public static final int TextView1=0x7f090022;
+        public static final int about=0x7f09005d;
+        public static final int action_settings=0x7f09005e;
+        public static final int auto=0x7f09000a;
+        public static final int autoC=0x7f090023;
+        public static final int autoM=0x7f090024;
+        public static final int back=0x7f090025;
+        public static final int bt_click=0x7f090034;
+        public static final int button01=0x7f090058;
+        public static final int button1=0x7f09000f;
+        public static final int button2=0x7f090036;
+        public static final int button3=0x7f090045;
+        public static final int button4=0x7f090046;
+        public static final int button5=0x7f090047;
+        public static final int chapter5=0x7f09001d;
+        public static final int checkBox1=0x7f090026;
+        public static final int checkBox2=0x7f090027;
+        public static final int checkBox3=0x7f090028;
+        public static final int checkBox4=0x7f090029;
+        public static final int checkbox=0x7f090008;
+        public static final int click=0x7f090054;
+        public static final int column2=0x7f090010;
+        public static final int column3=0x7f09001a;
+        public static final int date=0x7f09000d;
+        public static final int datePicker=0x7f09002d;
+        public static final int dialog=0x7f09000e;
+        public static final int dm=0x7f09002b;
+        public static final int editText=0x7f09002f;
+        public static final int editText1=0x7f090004;
+        public static final int editText2=0x7f090031;
+        public static final int exit=0x7f09000c;
+        public static final int gallery=0x7f090012;
+        public static final int gallery1=0x7f090035;
+        public static final int gamesurfaceview=0x7f09001f;
+        public static final int gameview=0x7f09001e;
+        public static final int get=0x7f090019;
+        public static final int gridView01=0x7f090014;
+        public static final int gridview=0x7f090037;
+        public static final int ib1=0x7f090039;
+        public static final int ib2=0x7f09003a;
+        public static final int ib3=0x7f09003b;
+        public static final int ib4=0x7f09003c;
+        public static final int imageButton=0x7f090011;
+        public static final int imageView1=0x7f090038;
+        public static final int iv_nav_indicator=0x7f090041;
+        public static final int iv_nav_left=0x7f090042;
+        public static final int iv_nav_right=0x7f090043;
+        public static final int ll1=0x7f090052;
+        public static final int mHsv=0x7f09003e;
+        public static final int mViewPager=0x7f090044;
+        public static final int main_layout=0x7f090000;
+        public static final int menu=0x7f09000b;
+        public static final int ownbutton=0x7f090021;
+        public static final int progress=0x7f090056;
+        public static final int rg_nav_content=0x7f090040;
+        public static final int rl0=0x7f090001;
+        public static final int rl02=0x7f090005;
+        public static final int rl1=0x7f090002;
+        public static final int rl2=0x7f090006;
+        public static final int rl_nav=0x7f09003f;
+        public static final int rl_tab=0x7f09003d;
+        public static final int scrollView=0x7f090015;
+        public static final int seek=0x7f090055;
+        public static final int spinner=0x7f090009;
+        public static final int spinner1=0x7f090059;
+        public static final int submit=0x7f09002a;
+        public static final int sv1=0x7f090051;
+        public static final int switcher=0x7f090013;
+        public static final int tabWidget=0x7f09001c;
+        public static final int tableLayout=0x7f09001b;
+        public static final int tablearn=0x7f090020;
+        public static final int textView1=0x7f090003;
+        public static final int textView2=0x7f090030;
+        public static final int timePicker=0x7f09002e;
+        public static final int tm=0x7f09002c;
+        public static final int tracking=0x7f090057;
+        public static final int tv01=0x7f090053;
+        public static final int tv1=0x7f09005a;
+        public static final int tv2=0x7f09005b;
+        public static final int tv3=0x7f09005c;
+        public static final int tv_intro=0x7f090033;
+        public static final int tv_tabName=0x7f090032;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int andygame=0x7f030001;
-        public static final int auto=0x7f030002;
-        public static final int checkbox=0x7f030003;
-        public static final int date=0x7f030004;
-        public static final int dialog=0x7f030005;
-        public static final int dialog_main=0x7f030006;
-<<<<<<< HEAD
-        public static final int fragment_selection_common=0x7f030007;
-        public static final int fragment_selection_launch=0x7f030008;
-        public static final int gallery=0x7f030009;
-        public static final int get=0x7f03000a;
-        public static final int grid=0x7f03000b;
-        public static final int imagebutton=0x7f03000c;
-        public static final int maintab_activity=0x7f03000d;
-        public static final int menumain=0x7f03000e;
-        public static final int menumain1=0x7f03000f;
-        public static final int nav_radiogroup_item=0x7f030010;
-        public static final int notify01=0x7f030011;
-        public static final int notify02=0x7f030012;
-        public static final int probar=0x7f030013;
-        public static final int prodia=0x7f030014;
-        public static final int radiobutton=0x7f030015;
-        public static final int scroll=0x7f030016;
-        public static final int seek=0x7f030017;
-        public static final int spinner=0x7f030018;
-        public static final int switcher=0x7f030019;
-        public static final int tablayout=0x7f03001a;
-        public static final int tabwid=0x7f03001b;
-=======
-        public static final int gallery=0x7f030007;
-        public static final int get=0x7f030008;
-        public static final int grid=0x7f030009;
-        public static final int imagebutton=0x7f03000a;
-        public static final int menumain=0x7f03000b;
-        public static final int menumain1=0x7f03000c;
-        public static final int notify01=0x7f03000d;
-        public static final int notify02=0x7f03000e;
-        public static final int probar=0x7f03000f;
-        public static final int prodia=0x7f030010;
-        public static final int radiobutton=0x7f030011;
-        public static final int scroll=0x7f030012;
-        public static final int seek=0x7f030013;
-        public static final int spinner=0x7f030014;
-        public static final int switcher=0x7f030015;
-        public static final int tablayout=0x7f030016;
-        public static final int tabwid=0x7f030017;
->>>>>>> c4bbe169d1315521d0acba259765f72c929a3556
+        public static final int activity_button=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int andygame=0x7f030002;
+        public static final int auto=0x7f030003;
+        public static final int checkbox=0x7f030004;
+        public static final int date=0x7f030005;
+        public static final int dialog=0x7f030006;
+        public static final int dialog_main=0x7f030007;
+        public static final int fragment_selection_common=0x7f030008;
+        public static final int fragment_selection_launch=0x7f030009;
+        public static final int gallery=0x7f03000a;
+        public static final int get=0x7f03000b;
+        public static final int grid=0x7f03000c;
+        public static final int imagebutton=0x7f03000d;
+        public static final int maintab_activity=0x7f03000e;
+        public static final int menumain=0x7f03000f;
+        public static final int menumain1=0x7f030010;
+        public static final int nav_radiogroup_item=0x7f030011;
+        public static final int notify01=0x7f030012;
+        public static final int notify02=0x7f030013;
+        public static final int probar=0x7f030014;
+        public static final int prodia=0x7f030015;
+        public static final int radiobutton=0x7f030016;
+        public static final int scroll=0x7f030017;
+        public static final int seek=0x7f030018;
+        public static final int spinner=0x7f030019;
+        public static final int switcher=0x7f03001a;
+        public static final int tablayout=0x7f03001b;
+        public static final int tabwid=0x7f03001c;
     }
     public static final class menu {
-        public static final int menu=0x7f060000;
+        public static final int menu=0x7f080000;
     }
     public static final class string {
-        public static final int action_setttings=0x7f040006;
-        public static final int app_name=0x7f040000;
-        public static final int back=0x7f040004;
-        public static final int date_title=0x7f040002;
-        public static final int hello=0x7f040005;
-        public static final int hello_world=0x7f040001;
-        public static final int ok=0x7f040003;
+        public static final int action_setttings=0x7f060006;
+        public static final int app_name=0x7f060000;
+        public static final int back=0x7f060004;
+        public static final int date_title=0x7f060002;
+        public static final int hello=0x7f060005;
+        public static final int hello_world=0x7f060001;
+        public static final int ok=0x7f060003;
     }
     public static final class style {
         /** 
@@ -285,10 +198,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
+        public static final int AppTheme=0x7f070001;
     }
 }

@@ -12,6 +12,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.ViewGroup.LayoutParams;
 import android.view.animation.LinearInterpolator;
@@ -94,6 +95,7 @@ public class MainTabActivity extends FragmentActivity {
 	}
 	
 	private void setListener(){
+		
 		mViewPager.setOnPageChangeListener(new OnPageChangeListener(){
 
 			@Override
@@ -110,6 +112,7 @@ public class MainTabActivity extends FragmentActivity {
 
 			@Override
 			public void onPageSelected(int arg0) {
+				Log.i("Andy", "onPageSelected()");
 				// TODO Auto-generated method stub
 				if(rg_nav_content!=null && rg_nav_content.getChildCount()>arg0){
 					((RadioButton)rg_nav_content.getChildAt(arg0)).performClick(); 
@@ -124,6 +127,8 @@ public class MainTabActivity extends FragmentActivity {
 
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
+				
+				Log.i("Andy", "onCheckedChanged()");
 				// TODO Auto-generated method stub
 				if(rg_nav_content.getChildAt(checkedId)!=null){
 					TranslateAnimation animation = new TranslateAnimation(currentIndicatorLeft ,
