@@ -35,4 +35,10 @@
         android:layout_height="wrap_content"
         android:text="Canvas" />
 
+    <Button
+        android:id="@+id/graphics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graphics" />
+
 </LinearLayout>

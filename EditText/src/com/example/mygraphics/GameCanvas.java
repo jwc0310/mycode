@@ -29,7 +29,7 @@ public class GameCanvas extends View implements Runnable {
 		mPaint.setAntiAlias(true);
 		
 		//设置裁剪区域
-		canvas.clipRect(10,10,280,260);
+		canvas.clipRect(10,10,700,1200);
 		//锁定画布
 		canvas.save();
 		

@@ -5,6 +5,7 @@ import com.example.game.GameSurViewActivity;
 import com.example.game.GameViewActivity;
 import com.example.mygraphics.GameCanvas;
 import com.example.mygraphics.GameCanvasActivity;
+import com.example.mygraphics.GameView1Activity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -17,7 +18,7 @@ import android.widget.Button;
 
 public class AndyGame extends Activity {
 	
-	private Button gameView,gameSurface,tab,own,canvas;
+	private Button gameView,gameSurface,tab,own,canvas,graphics;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -42,6 +43,9 @@ public class AndyGame extends Activity {
 		
 		canvas = (Button)findViewById(R.id.canvas);
 		canvas.setOnClickListener(buttonEvent);
+		
+		graphics = (Button)findViewById(R.id.graphics);
+		graphics.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -74,6 +78,11 @@ public class AndyGame extends Activity {
 			case R.id.canvas:
 				Intent toCan = new Intent(AndyGame.this,GameCanvasActivity.class);
 				startActivity(toCan);
+				break;
+				
+			case R.id.graphics:
+				Intent toGra = new Intent(AndyGame.this,GameView1Activity.class);
+				startActivity(toGra);
 				break;
 				
 			default:
