@@ -253,7 +253,7 @@ public class MainActivity extends Activity {
 				toGet.setClass(MainActivity.this, get.class);
 				startActivity(toGet);
 				//MainActivity.this.finish();
-				
+				break;
 			case R.id.tableLayout:
 				Log.i("Andy", "tab");
 				Intent toTab = new Intent();
@@ -274,7 +274,7 @@ public class MainActivity extends Activity {
 				toNext.setClass(MainActivity.this, AndyGame.class);
 				startActivity(toNext);
 				//MainActivity.this.finish();
-				
+				break;
 			default:
 				break;
 			}
