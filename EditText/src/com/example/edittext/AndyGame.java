@@ -3,6 +3,8 @@ package com.example.edittext;
 import com.example.button.ButtonActivity;
 import com.example.game.GameSurViewActivity;
 import com.example.game.GameViewActivity;
+import com.example.mygraphics.GameCanvas;
+import com.example.mygraphics.GameCanvasActivity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -15,7 +17,7 @@ import android.widget.Button;
 
 public class AndyGame extends Activity {
 	
-	private Button gameView,gameSurface,tab,own;
+	private Button gameView,gameSurface,tab,own,canvas;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -37,6 +39,9 @@ public class AndyGame extends Activity {
 		
 		own = (Button)findViewById(R.id.ownbutton);
 		own.setOnClickListener(buttonEvent);
+		
+		canvas = (Button)findViewById(R.id.canvas);
+		canvas.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -65,6 +70,11 @@ public class AndyGame extends Activity {
 				Intent toOwn = new Intent(AndyGame.this,ButtonActivity.class);
 				startActivity(toOwn);
 				break;	
+				
+			case R.id.canvas:
+				Intent toCan = new Intent(AndyGame.this,GameCanvasActivity.class);
+				startActivity(toCan);
+				break;
 				
 			default:
 				Log.i("Andy", "default");

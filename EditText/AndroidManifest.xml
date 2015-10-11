@@ -27,6 +27,7 @@
         <activity android:name="com.example.game.GameSurViewActivity"></activity>
         <activity android:name="com.example.playtab.MainTabActivity"></activity>
         <activity android:name="com.example.button.ButtonActivity" />
+        <activity android:name="com.example.mygraphics.GameCanvasActivity" />
         
         
         
