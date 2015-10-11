@@ -12,12 +12,13 @@ import android.view.View;
 public class GameView1 extends View implements Runnable {
 
 	private Paint mPaint = null;
+	private GameView2 mGameView2 = null;
 	
 	public GameView1(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 		mPaint = new Paint();
-		
+		mGameView2 = new GameView2(context);
 		
 		new Thread(this).start();
 		
@@ -116,6 +117,8 @@ public class GameView1 extends View implements Runnable {
 		canvas.drawLine(100+5+200, 100+110+200, 100+315+200, 100+110+200, mPaint);
 		
 		
+		//ShapeDrawable
+		mGameView2.DrawShape(canvas);
 		
 	}
 	
