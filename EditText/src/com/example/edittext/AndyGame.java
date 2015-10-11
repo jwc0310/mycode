@@ -5,6 +5,7 @@ import com.example.game.GameSurViewActivity;
 import com.example.game.GameViewActivity;
 import com.example.mygraphics.GameCanvas;
 import com.example.mygraphics.GameCanvasActivity;
+import com.example.mygraphics.GameFontActivity;
 import com.example.mygraphics.GameView1Activity;
 import com.example.playtab.MainTabActivity;
 
@@ -18,7 +19,7 @@ import android.widget.Button;
 
 public class AndyGame extends Activity {
 	
-	private Button gameView,gameSurface,tab,own,canvas,graphics;
+	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -46,6 +47,9 @@ public class AndyGame extends Activity {
 		
 		graphics = (Button)findViewById(R.id.graphics);
 		graphics.setOnClickListener(buttonEvent);
+		
+		font = (Button)findViewById(R.id.font);
+		font.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -83,6 +87,11 @@ public class AndyGame extends Activity {
 			case R.id.graphics:
 				Intent toGra = new Intent(AndyGame.this,GameView1Activity.class);
 				startActivity(toGra);
+				break;
+				
+			case R.id.font:
+				Intent toFont = new Intent(AndyGame.this,GameFontActivity.class);
+				startActivity(toFont);
 				break;
 				
 			default:

@@ -29,6 +29,7 @@
         <activity android:name="com.example.button.ButtonActivity" />
         <activity android:name="com.example.mygraphics.GameCanvasActivity" />
         <activity android:name="com.example.mygraphics.GameView1Activity"/>
+        <activity android:name="com.example.mygraphics.GameFontActivity"></activity>
         
         
         
