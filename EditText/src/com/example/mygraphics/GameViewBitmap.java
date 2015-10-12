@@ -8,6 +8,9 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.Paint;
+import android.util.Log;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class GameViewBitmap extends View implements Runnable {
@@ -84,7 +87,50 @@ public class GameViewBitmap extends View implements Runnable {
 		dst = null;
 		
 	}
-	
+	// 触笔事件
+		public boolean onTouchEvent(MotionEvent event)
+		{
+			Log.i("Andy", event+" hello");
+			
+			return true;
+		}
+
+
+		// 按键按下事件
+		public boolean onKeyDown(int keyCode, KeyEvent event)
+		{
+			Log.i("Andy", keyCode+" hello");
+			//左方向键
+			if (keyCode == KeyEvent.KEYCODE_DPAD_LEFT)
+			{
+				if (miDTX > 0)
+				{
+					miDTX--;
+				}
+			}
+			//右方向键
+			else if (keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)
+			{
+				if (miDTX+mBitDestTop.getWidth() < 320)
+				{
+					miDTX++;
+				}
+			}
+			return true;
+		}
+
+
+		// 按键弹起事件
+		public boolean onKeyUp(int keyCode, KeyEvent event)
+		{
+			return false;
+		}
+
+
+		public boolean onKeyMultiple(int keyCode, int repeatCount, KeyEvent event)
+		{
+			return true;
+		}
 	
 	
 	
