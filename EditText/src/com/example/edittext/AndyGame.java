@@ -7,6 +7,7 @@ import com.example.mygraphics.GameCanvas;
 import com.example.mygraphics.GameCanvasActivity;
 import com.example.mygraphics.GameFontActivity;
 import com.example.mygraphics.GameView1Activity;
+import com.example.mygraphics.GameViewBitmapActivity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -20,6 +21,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
+	private Button bitmap;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -50,6 +52,9 @@ public class AndyGame extends Activity {
 		
 		font = (Button)findViewById(R.id.font);
 		font.setOnClickListener(buttonEvent);
+		
+		bitmap = (Button)findViewById(R.id.bitmap);
+		bitmap.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -92,6 +97,11 @@ public class AndyGame extends Activity {
 			case R.id.font:
 				Intent toFont = new Intent(AndyGame.this,GameFontActivity.class);
 				startActivity(toFont);
+				break;
+				
+			case R.id.bitmap:
+				Intent toBit = new Intent(AndyGame.this,GameViewBitmapActivity.class);
+				startActivity(toBit);
 				break;
 				
 			default:
