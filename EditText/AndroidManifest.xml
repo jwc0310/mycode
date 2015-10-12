@@ -31,6 +31,7 @@
         <activity android:name="com.example.mygraphics.GameView1Activity"/>
         <activity android:name="com.example.mygraphics.GameFontActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewBitmapActivity"></activity>
+        <activity android:name="com.example.mygraphics.GameViewRotateActivity"></activity>
         
         
         

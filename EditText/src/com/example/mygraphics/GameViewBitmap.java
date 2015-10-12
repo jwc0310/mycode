@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 
 public class GameViewBitmap extends View implements Runnable {
 
@@ -30,6 +31,7 @@ public class GameViewBitmap extends View implements Runnable {
 		mBitQQ = ((BitmapDrawable) getResources().getDrawable(R.drawable.qq)).getBitmap();
 		mBitDestTop = ((BitmapDrawable) getResources().getDrawable(R.drawable.desktop)).getBitmap();
 		
+		
 		new Thread(this).start();
 		
 	}
@@ -42,7 +44,6 @@ public class GameViewBitmap extends View implements Runnable {
 		
 		//在指定位置按指定裁剪的渔区进行回执
 		GameViewBitmap.drawImage(canvas, mBitDestTop, miDTX, mBitQQ.getHeight(), mBitDestTop.getWidth(), mBitDestTop.getHeight()/2, 0, 0);
-		
 		
 	}
 	

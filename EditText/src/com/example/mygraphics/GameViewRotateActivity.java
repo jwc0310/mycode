@@ -2,21 +2,19 @@ package com.example.mygraphics;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.Button;
 
-public class GameViewBitmapActivity extends Activity {
-
+public class GameViewRotateActivity extends Activity {
 	
-	private GameViewBitmap mGvb = null;
+	private GameViewRotate mGvr;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		
-		mGvb = new GameViewBitmap(this);
+		mGvr = new GameViewRotate(this);
+		setContentView(mGvr);
 		
-		setContentView(mGvb);
+		
 		
 	}
-	
 }

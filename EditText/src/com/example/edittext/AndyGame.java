@@ -8,6 +8,7 @@ import com.example.mygraphics.GameCanvasActivity;
 import com.example.mygraphics.GameFontActivity;
 import com.example.mygraphics.GameView1Activity;
 import com.example.mygraphics.GameViewBitmapActivity;
+import com.example.mygraphics.GameViewRotateActivity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -21,7 +22,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
-	private Button bitmap;
+	private Button bitmap,rotate;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -55,6 +56,9 @@ public class AndyGame extends Activity {
 		
 		bitmap = (Button)findViewById(R.id.bitmap);
 		bitmap.setOnClickListener(buttonEvent);
+		
+		rotate = (Button)findViewById(R.id.rotate);
+		rotate.setOnClickListener(buttonEvent);
 		
 		
 	}
@@ -102,6 +106,11 @@ public class AndyGame extends Activity {
 			case R.id.bitmap:
 				Intent toBit = new Intent(AndyGame.this,GameViewBitmapActivity.class);
 				startActivity(toBit);
+				break;
+				
+			case R.id.rotate:
+				Intent toRotate = new Intent(AndyGame.this,GameViewRotateActivity.class);
+				startActivity(toRotate);
 				break;
 				
 			default:
