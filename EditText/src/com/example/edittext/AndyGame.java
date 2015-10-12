@@ -10,6 +10,7 @@ import com.example.mygraphics.GameView1Activity;
 import com.example.mygraphics.GameViewBitmapActivity;
 import com.example.mygraphics.GameViewRotateActivity;
 import com.example.mygraphics.GameViewScaleActivity;
+import com.example.mygraphics.GameViewShaderActivity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -23,7 +24,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
-	private Button bitmap,rotate,scale;
+	private Button bitmap,rotate,scale,shader;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -63,6 +64,9 @@ public class AndyGame extends Activity {
 		
 		scale = (Button)findViewById(R.id.scale);
 		scale.setOnClickListener(buttonEvent);
+		
+		shader = (Button)findViewById(R.id.shader);
+		shader.setOnClickListener(buttonEvent);
 		
 	}
 	
@@ -119,6 +123,11 @@ public class AndyGame extends Activity {
 			case R.id.scale:
 				Intent toScale = new Intent(AndyGame.this,GameViewScaleActivity.class);
 				startActivity(toScale);
+				break;
+				
+			case R.id.shader:
+				Intent toShader = new Intent(AndyGame.this,GameViewShaderActivity.class);
+				startActivity(toShader);
 				break;
 				
 			default:

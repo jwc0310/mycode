@@ -33,6 +33,7 @@
         <activity android:name="com.example.mygraphics.GameViewBitmapActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewRotateActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewScaleActivity"></activity>
+        <activity android:name="com.example.mygraphics.GameViewShaderActivity"></activity>
         
         
         
