@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="horizontal"
+    android:rowCount="5"
+    android:columnCount="3"
+     >"
     
     <Button
         android:id="@+id/gameview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="GameView"
          />
 
@@ -15,54 +19,63 @@
         android:id="@+id/gamesurfaceview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Surface" />
 
     <Button
         android:id="@+id/tablearn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="TABS" />
 
     <Button
         android:id="@+id/ownbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="OwnButton" />
 
     <Button
         android:id="@+id/canvas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Canvas" />
 
     <Button
         android:id="@+id/graphics"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Graphics" />
 
     <Button
         android:id="@+id/font"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Font" />
 
     <Button
         android:id="@+id/bitmap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Bitmap" />
 
     <Button
         android:id="@+id/rotate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Rotate" />
 
     <Button
         android:id="@+id/scale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="fill"
         android:text="Scale" />
 
-</LinearLayout>
+</GridLayout>
