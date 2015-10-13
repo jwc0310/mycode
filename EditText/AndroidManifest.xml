@@ -35,6 +35,7 @@
         <activity android:name="com.example.mygraphics.GameViewScaleActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewShaderActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewDoubleBufferActivity"></activity>
+        <activity android:name="com.example.mygraphics.GameViewTweenActivity"></activity>
         
         
         

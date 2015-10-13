@@ -12,6 +12,7 @@ import com.example.mygraphics.GameViewDoubleBufferActivity;
 import com.example.mygraphics.GameViewRotateActivity;
 import com.example.mygraphics.GameViewScaleActivity;
 import com.example.mygraphics.GameViewShaderActivity;
+import com.example.mygraphics.GameViewTweenActivity;
 import com.example.playtab.MainTabActivity;
 
 import android.app.Activity;
@@ -25,7 +26,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
-	private Button bitmap,rotate,scale,shader,douBuf;
+	private Button bitmap,rotate,scale,shader,douBuf,tween;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -71,6 +72,9 @@ public class AndyGame extends Activity {
 		
 		douBuf = (Button)findViewById(R.id.doubuf);
 		douBuf.setOnClickListener(buttonEvent);
+		
+		tween = (Button)findViewById(R.id.tween);
+		tween.setOnClickListener(buttonEvent);
 		
 	}
 	
@@ -137,6 +141,11 @@ public class AndyGame extends Activity {
 			case R.id.doubuf:
 				Intent toDouBuf = new Intent(AndyGame.this,GameViewDoubleBufferActivity.class);
 				startActivity(toDouBuf);
+				break;
+				
+			case R.id.tween:
+				Intent toTween = new Intent(AndyGame.this,GameViewTweenActivity.class);
+				startActivity(toTween);
 				break;
 				
 			default:
