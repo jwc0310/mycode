@@ -80,8 +80,15 @@
     <Button
         android:id="@+id/shader"
         android:layout_column="1"
-        android:layout_gravity="center_horizontal|top"
+        android:layout_gravity="fill"
         android:layout_row="3"
         android:text="Shader" />
+
+    <Button
+        android:id="@+id/doubuf"
+        android:layout_column="2"
+        android:layout_gravity="fill"
+        android:layout_row="3"
+        android:text="DouBuffer" />
 
 </GridLayout>

@@ -8,6 +8,7 @@ import com.example.mygraphics.GameCanvasActivity;
 import com.example.mygraphics.GameFontActivity;
 import com.example.mygraphics.GameView1Activity;
 import com.example.mygraphics.GameViewBitmapActivity;
+import com.example.mygraphics.GameViewDoubleBufferActivity;
 import com.example.mygraphics.GameViewRotateActivity;
 import com.example.mygraphics.GameViewScaleActivity;
 import com.example.mygraphics.GameViewShaderActivity;
@@ -24,7 +25,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
-	private Button bitmap,rotate,scale,shader;
+	private Button bitmap,rotate,scale,shader,douBuf;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -67,6 +68,9 @@ public class AndyGame extends Activity {
 		
 		shader = (Button)findViewById(R.id.shader);
 		shader.setOnClickListener(buttonEvent);
+		
+		douBuf = (Button)findViewById(R.id.doubuf);
+		douBuf.setOnClickListener(buttonEvent);
 		
 	}
 	
@@ -128,6 +132,11 @@ public class AndyGame extends Activity {
 			case R.id.shader:
 				Intent toShader = new Intent(AndyGame.this,GameViewShaderActivity.class);
 				startActivity(toShader);
+				break;
+				
+			case R.id.doubuf:
+				Intent toDouBuf = new Intent(AndyGame.this,GameViewDoubleBufferActivity.class);
+				startActivity(toDouBuf);
 				break;
 				
 			default:
