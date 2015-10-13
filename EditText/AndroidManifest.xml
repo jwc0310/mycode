@@ -37,6 +37,7 @@
         <activity android:name="com.example.mygraphics.GameViewDoubleBufferActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewTweenActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewFrameActivity"></activity>
+        <activity android:name="com.example.mygraphics.GameViewGifActivity"></activity>
         
         
         <activity android:name="LearnRadioButton"></activity>

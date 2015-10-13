@@ -10,6 +10,7 @@ import com.example.mygraphics.GameView1Activity;
 import com.example.mygraphics.GameViewBitmapActivity;
 import com.example.mygraphics.GameViewDoubleBufferActivity;
 import com.example.mygraphics.GameViewFrameActivity;
+import com.example.mygraphics.GameViewGifActivity;
 import com.example.mygraphics.GameViewRotateActivity;
 import com.example.mygraphics.GameViewScaleActivity;
 import com.example.mygraphics.GameViewShaderActivity;
@@ -27,7 +28,7 @@ import android.widget.Button;
 public class AndyGame extends Activity {
 	
 	private Button gameView,gameSurface,tab,own,canvas,graphics,font;
-	private Button bitmap,rotate,scale,shader,douBuf,tween,frame;
+	private Button bitmap,rotate,scale,shader,douBuf,tween,frame,gif;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -79,6 +80,9 @@ public class AndyGame extends Activity {
 		
 		frame = (Button)findViewById(R.id.frame);
 		frame.setOnClickListener(buttonEvent);
+		
+		gif = (Button)findViewById(R.id.gif);
+		gif.setOnClickListener(buttonEvent);
 		
 	}
 	
@@ -155,6 +159,11 @@ public class AndyGame extends Activity {
 			case R.id.frame:
 				Intent toFrame = new Intent(AndyGame.this,GameViewFrameActivity.class);
 				startActivity(toFrame);
+				break;
+				
+			case R.id.gif:
+				Intent toGif = new Intent(AndyGame.this,GameViewGifActivity.class);
+				startActivity(toGif);
 				break;
 				
 			default:
