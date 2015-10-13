@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:columnCount="3"
     android:orientation="horizontal"
-    android:rowCount="6" >
+    android:rowCount="6"
+    android:background="@drawable/b" >
 "
 
     <Button
