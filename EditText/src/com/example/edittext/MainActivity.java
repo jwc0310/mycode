@@ -1,5 +1,7 @@
 package com.example.edittext;
 
+import com.example.net.NetActivity;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,7 +26,7 @@ public class MainActivity extends Activity {
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
-	private Button get,tab,tabwid,chapter;
+	private Button get,tab,tabwid,chapter,chapter8;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,7 @@ public class MainActivity extends Activity {
         tab = (Button)findViewById(R.id.tableLayout);
         tabwid = (Button)findViewById(R.id.tabWidget);
         chapter = (Button)findViewById(R.id.chapter5);
+        chapter8 = (Button)findViewById(R.id.chapter8);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -78,6 +81,7 @@ public class MainActivity extends Activity {
         tab.setOnClickListener(button);
         tabwid.setOnClickListener(button);
         chapter.setOnClickListener(button);
+        chapter8.setOnClickListener(button);
         
         
         et1.setOnKeyListener(new OnKeyListener(){
@@ -275,6 +279,14 @@ public class MainActivity extends Activity {
 				startActivity(toNext);
 				//MainActivity.this.finish();
 				break;
+				
+			case R.id.chapter8:
+				Log.i("Andy", "Net");
+				startActivity(new Intent(MainActivity.this,NetActivity.class));
+				//MainActivity.this.finish();
+				break;
+				
+				
 			default:
 				break;
 			}

@@ -254,6 +254,16 @@
 		        android:layout_below="@+id/tabWidget"
 		        android:text="Chapter5" />
 
+		    <Button
+		        android:id="@+id/chapter8"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/chapter5"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@id/chapter5"
+		        android:layout_centerHorizontal="true"
+		        android:text="Chapter8" />
+
 		</RelativeLayout>
     
     </RelativeLayout>
