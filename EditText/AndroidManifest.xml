@@ -26,6 +26,11 @@
         
         
         <activity android:name="com.example.net.NetActivity"></activity>
+        <activity android:name="com.example.net.NetUI"></activity>
+        <activity android:name="com.example.net.Activity02"></activity>
+        <activity android:name="com.example.net.Activity03"></activity>
+        <activity android:name="com.example.net.Activity04"></activity>
+        
         
         
         

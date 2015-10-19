@@ -17,6 +17,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 
 import com.example.edittext.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +27,7 @@ import android.widget.Toast;
 
 public class NetActivity extends Activity implements OnClickListener {
 
-	private Button java,apache,android;
+	private Button java,apache,android,kind;
 	
 	
 	@Override
@@ -45,7 +46,10 @@ public class NetActivity extends Activity implements OnClickListener {
 		apache.setOnClickListener(this);
 		
 		android = (Button)findViewById(R.id.android);
-		apache.setOnClickListener(this);
+		android.setOnClickListener(this);
+		
+		kind = (Button)findViewById(R.id.kind);
+		kind.setOnClickListener(this);
 	}
 	
 	
@@ -75,6 +79,11 @@ public class NetActivity extends Activity implements OnClickListener {
 				e.printStackTrace();
 			}
 			break;
+			
+		case R.id.kind:
+			startActivity(new Intent(NetActivity.this,NetUI.class));
+			break;
+			
 		}
 		
 	}

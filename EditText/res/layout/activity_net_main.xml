@@ -22,4 +22,10 @@
         android:layout_height="wrap_content"
         android:text="Andr.net.*" />
 
+    <Button
+        android:id="@+id/kind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kind" />
+
 </LinearLayout>

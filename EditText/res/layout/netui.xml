@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="通过下面的按钮进行不同方式的连接" />
+
+    <Button
+        android:id="@+id/button1_http"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="直接获取数据" />
+
+    <Button
+        android:id="@+id/button2_get"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="以GET方式传递数据" />
+
+    <Button
+        android:id="@+id/button3_post"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="以POST方式传递数据" />
+
+</LinearLayout>
