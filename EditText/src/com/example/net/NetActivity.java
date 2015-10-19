@@ -91,7 +91,7 @@ public class NetActivity extends Activity implements OnClickListener {
 	private void testJava(){
 		try{
 			
-			URL url = new URL("http://localhost");
+			URL url = new URL("http://192.168.61.110");
 			HttpURLConnection http = (HttpURLConnection)url.openConnection();
 			Log.i("Andy", "nRC1 = ");
 			int nRC = http.getResponseCode();

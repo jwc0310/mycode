@@ -14,6 +14,7 @@ import com.example.edittext.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -28,9 +29,19 @@ public class Activity04 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.http);
 		
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()  
+            .detectDiskReads().detectDiskWrites().detectNetwork()  
+            .penaltyLog().build());  
+  
+			StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()  
+            .detectLeakedSqlLiteObjects().penaltyLog().penaltyDeath()  
+            .build());
+		}
+		
 		TextView mTextView = (TextView)this.findViewById(R.id.textView_http);
 		//http地址"?par=abcdefg"是我们上传的参数
-		String httpUrl = "http://192.168.1.110:8080/httpget.jsp";
+		String httpUrl = "http://192.168.61.110:8080/httpget.jsp";
 		//获得的数据
 		String resultData = "";
 		URL url = null;

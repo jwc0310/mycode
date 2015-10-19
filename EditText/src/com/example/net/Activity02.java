@@ -10,6 +10,7 @@ import com.example.edittext.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,9 +24,20 @@ public class Activity02 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.http);
 		
+		if (android.os.Build.VERSION.SDK_INT > 9) {
+			StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()  
+            .detectDiskReads().detectDiskWrites().detectNetwork()  
+            .penaltyLog().build());  
+  
+			StrictMode.setVmPolicy(new StrictMode.VmPolicy.Builder()  
+            .detectLeakedSqlLiteObjects().penaltyLog().penaltyDeath()  
+            .build());
+		}
+		
+		
 		TextView mtv = (TextView)findViewById(R.id.textView_http);
 		
-		String httpUrl = "http://127.0.0.1/http1.jst";
+		String httpUrl = "http://192.168.61.110:8080/http1.jsp";
 		
 		String resultData = "";
 		URL url = null;
