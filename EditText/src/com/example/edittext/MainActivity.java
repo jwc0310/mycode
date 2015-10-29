@@ -1,5 +1,6 @@
 package com.example.edittext;
 
+import com.example.media.MainMediaActivity;
 import com.example.net.NetActivity;
 
 import android.app.Activity;
@@ -27,6 +28,7 @@ public class MainActivity extends Activity {
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
+	private Button media;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +61,7 @@ public class MainActivity extends Activity {
         tabwid = (Button)findViewById(R.id.tabWidget);
         chapter = (Button)findViewById(R.id.chapter5);
         chapter8 = (Button)findViewById(R.id.chapter8);
+        media = (Button)findViewById(R.id.media);
         
         radio.setOnClickListener(button);
         checkbox.setOnClickListener(button);
@@ -82,7 +85,7 @@ public class MainActivity extends Activity {
         tabwid.setOnClickListener(button);
         chapter.setOnClickListener(button);
         chapter8.setOnClickListener(button);
-        
+        media.setOnClickListener(button);
         
         et1.setOnKeyListener(new OnKeyListener(){
 
@@ -121,11 +124,8 @@ public class MainActivity extends Activity {
 			}
         	
         });
-        
-        
     }
-    
-    
+
     OnClickListener button = new OnClickListener(){
 
 		@Override
@@ -137,7 +137,6 @@ public class MainActivity extends Activity {
 				toRadio.setClass(MainActivity.this, LearnRadioButton.class);
 				startActivity(toRadio);
 				MainActivity.this.finish();
-				
 				break;
 			case R.id.checkbox:
 				Intent toCheckbox = new Intent();
@@ -145,15 +144,12 @@ public class MainActivity extends Activity {
 				startActivity(toCheckbox);
 				MainActivity.this.finish();
 				break;
-			
 			case R.id.spinner:
 				Intent toSpinner = new Intent();
 				toSpinner.setClass(MainActivity.this, learnSpinner.class);
 				startActivity(toSpinner);
 				MainActivity.this.finish();
-				
 				break;
-			
 			case R.id.auto:
 				Intent toAuto = new Intent();
 				toAuto.setClass(MainActivity.this, auto.class);
@@ -165,7 +161,7 @@ public class MainActivity extends Activity {
 				toData.setClass(MainActivity.this, date.class);
 				startActivity(toData);
 				MainActivity.this.finish();
-			
+				break;
 			case R.id.exit:
 				MainActivity.this.finish();
 				break;
@@ -180,7 +176,6 @@ public class MainActivity extends Activity {
 				toDialog.setClass(MainActivity.this, LearnDialog.class);
 				startActivity(toDialog);
 				MainActivity.this.finish();
-				
 				break;
 				
 			case R.id.imageButton:
@@ -188,61 +183,49 @@ public class MainActivity extends Activity {
 				toImagebutton.setClass(MainActivity.this, LearnImagebutton.class);
 				startActivity(toImagebutton);
 				MainActivity.this.finish();
-				
 				break;
-				
 			case R.id.gallery:
 				Intent togallery = new Intent();
 				togallery.setClass(MainActivity.this, gallery.class);
 				startActivity(togallery);
 				MainActivity.this.finish();
-				
 				break;
-				
 			case R.id.switcher:
 				Intent toswitcher = new Intent();
 				toswitcher.setClass(MainActivity.this, imageSwitcher.class);
 				startActivity(toswitcher);
 				MainActivity.this.finish();
-				
 				break;
 			case R.id.gridView01:
 				Intent toGrid = new Intent();
 				toGrid.setClass(MainActivity.this, gridView.class);
 				startActivity(toGrid);
 				MainActivity.this.finish();
-				
 				break;
-				
 			case R.id.scrollView:
 				Intent toScroll = new Intent();
 				toScroll.setClass(MainActivity.this, scroll.class);
 				startActivity(toScroll);
 				MainActivity.this.finish();
-				
 				break;
-				
 			case R.id.ProgressBar:
 				Intent toPro = new Intent();
 				toPro.setClass(MainActivity.this, Probar.class);
 				startActivity(toPro);
 				MainActivity.this.finish();
 				break;
-				
 			case R.id.SeekBar:
 				Intent toSeek = new Intent();
 				toSeek.setClass(MainActivity.this, Seek.class);
 				startActivity(toSeek);
 				MainActivity.this.finish();
 				break;
-				
 			case R.id.Notify:
 				Intent toNotify = new Intent();
 				toNotify.setClass(MainActivity.this, Notify.class);
 				startActivity(toNotify);
 				MainActivity.this.finish();
 				break;
-				
 			case R.id.button1:
 				Log.i("Andy", "button1");
 				Intent toB = new Intent();
@@ -250,43 +233,39 @@ public class MainActivity extends Activity {
 				startActivity(toB);
 				MainActivity.this.finish();
 				break;
-				
 			case R.id.get:
 				Log.i("Andy", "get");
 				Intent toGet = new Intent();
 				toGet.setClass(MainActivity.this, get.class);
 				startActivity(toGet);
-				//MainActivity.this.finish();
 				break;
 			case R.id.tableLayout:
 				Log.i("Andy", "tab");
 				Intent toTab = new Intent();
 				toTab.setClass(MainActivity.this, TabLayout.class);
 				startActivity(toTab);
-				//MainActivity.this.finish();
 				break;
 			case R.id.tabWidget:
 				Log.i("Andy", "tabWidget");
 				Intent toTabW = new Intent();
 				toTabW.setClass(MainActivity.this, TabWid.class);
 				startActivity(toTabW);
-				//MainActivity.this.finish();
 				break;
 			case R.id.chapter5:
 				Log.i("Andy", "tabWidget");
 				Intent toNext = new Intent();
 				toNext.setClass(MainActivity.this, AndyGame.class);
 				startActivity(toNext);
-				//MainActivity.this.finish();
 				break;
-				
 			case R.id.chapter8:
 				Log.i("Andy", "Net");
 				startActivity(new Intent(MainActivity.this,NetActivity.class));
 				//MainActivity.this.finish();
 				break;
-				
-				
+			case R.id.media:
+				Log.i("Andy", "Media");
+				startActivity(new Intent(MainActivity.this,MainMediaActivity.class));
+				break;
 			default:
 				break;
 			}
