@@ -12,7 +12,7 @@ import android.widget.VideoView;
 public class MainMediaActivity extends Activity implements OnClickListener {
 	private VideoView videoView;
 	private Button load,play,pause;
-	private static final String VIDEO_PATH = new String("/storage/sdcard1/music/Wildlife.wmv");
+	private static final String VIDEO_PATH = new String("/storage/emulated/legacy/一次就好.mp4");
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
