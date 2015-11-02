@@ -74,6 +74,7 @@
         <activity android:name="TabLayout"></activity>
         <activity android:name="TabWid"></activity>
         <activity android:name="com.example.edittext.AndyGame"></activity>
+        <activity android:name="com.example.media.MySurface"></activity>
         
         
         

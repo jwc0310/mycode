@@ -2,6 +2,7 @@ package com.example.media;
 
 import com.example.edittext.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -12,6 +13,7 @@ import android.widget.VideoView;
 public class MainMediaActivity extends Activity implements OnClickListener {
 	private VideoView videoView;
 	private Button load,play,pause;
+	private Button surface;
 	private static final String VIDEO_PATH = new String("/storage/emulated/legacy/一次就好.mp4");
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -22,10 +24,12 @@ public class MainMediaActivity extends Activity implements OnClickListener {
 		load = (Button)findViewById(R.id.LoadButton);
 		play = (Button)findViewById(R.id.play);
 		pause = (Button)findViewById(R.id.pause);
+		surface = (Button)findViewById(R.id.surface);
 		
 		load.setOnClickListener(this);
 		play.setOnClickListener(this);
 		pause.setOnClickListener(this);
+		surface.setOnClickListener(this);
 	}
 
 	@Override
@@ -43,6 +47,9 @@ public class MainMediaActivity extends Activity implements OnClickListener {
 			break;
 		case R.id.pause:
 			videoView.pause();
+			break;
+		case R.id.surface:
+			startActivity(new Intent(this,MySurface.class));
 			break;
 		}
 	}
