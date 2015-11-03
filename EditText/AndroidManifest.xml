@@ -10,6 +10,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:allowBackup="true"
@@ -75,6 +76,7 @@
         <activity android:name="TabWid"></activity>
         <activity android:name="com.example.edittext.AndyGame"></activity>
         <activity android:name="com.example.media.MySurface"></activity>
+        <activity android:name="com.example.media.MyRecorder"></activity>
         
         
         

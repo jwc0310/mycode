@@ -13,7 +13,7 @@ import android.widget.VideoView;
 public class MainMediaActivity extends Activity implements OnClickListener {
 	private VideoView videoView;
 	private Button load,play,pause;
-	private Button surface;
+	private Button surface,recorder;
 	private static final String VIDEO_PATH = new String("/storage/emulated/legacy/一次就好.mp4");
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -25,11 +25,13 @@ public class MainMediaActivity extends Activity implements OnClickListener {
 		play = (Button)findViewById(R.id.play);
 		pause = (Button)findViewById(R.id.pause);
 		surface = (Button)findViewById(R.id.surface);
+		recorder = (Button)findViewById(R.id.recorder);
 		
 		load.setOnClickListener(this);
 		play.setOnClickListener(this);
 		pause.setOnClickListener(this);
 		surface.setOnClickListener(this);
+		recorder.setOnClickListener(this);
 	}
 
 	@Override
@@ -51,6 +53,10 @@ public class MainMediaActivity extends Activity implements OnClickListener {
 		case R.id.surface:
 			startActivity(new Intent(this,MySurface.class));
 			break;
+		case R.id.recorder:
+			startActivity(new Intent(this,MyRecorder.class));
+			break;
+			
 		}
 	}
 		
