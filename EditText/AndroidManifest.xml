@@ -52,7 +52,6 @@
         <activity android:name="com.example.mygraphics.GameViewFrameActivity"></activity>
         <activity android:name="com.example.mygraphics.GameViewGifActivity"></activity>
         
-        
         <activity android:name="LearnRadioButton"></activity>
         <activity android:name="learnCheckBox"></activity>
         <activity android:name="learnSpinner"></activity>
@@ -77,10 +76,8 @@
         <activity android:name="com.example.edittext.AndyGame"></activity>
         <activity android:name="com.example.media.MySurface"></activity>
         <activity android:name="com.example.media.MyRecorder"></activity>
-        
-        
-        
-        
+        <activity android:name="MyFragment"></activity>
+        <activity android:name="com.example.fragment.MyFirstFragment"></activity>
         
     </application>
 

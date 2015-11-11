@@ -273,6 +273,14 @@
 		        android:layout_below="@+id/chapter8"
 		        android:text="Media" />
 
+		    <Button
+		        android:id="@+id/fragment"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/media"
+		        android:layout_centerHorizontal="true"
+		        android:text="Fragment" />
+
 		</RelativeLayout>
     
     </RelativeLayout>

@@ -28,102 +28,14 @@ public class MainActivity extends Activity {
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
-	private Button media;
+	private Button media,fragment;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
-        tv1 = (TextView)findViewById(R.id.textView1);
-        et1 = (EditText)findViewById(R.id.editText1);
-        et1.setHint("请输入账号：");
-        
-        radio = (Button)findViewById(R.id.Radio);
-        checkbox = (Button)findViewById(R.id.checkbox);
-        spin = (Button)findViewById(R.id.spinner);
-        auto = (Button)findViewById(R.id.auto);
-        data = (Button)findViewById(R.id.date);
-        exit = (Button)findViewById(R.id.exit);
-        menu = (Button)findViewById(R.id.menu);
-        dialog = (Button)findViewById(R.id.dialog);
-        imageButton = (Button)findViewById(R.id.imageButton);
-        gallery = (Button)findViewById(R.id.gallery);
-        switcher = (Button)findViewById(R.id.switcher);
-        grid = (Button)findViewById(R.id.gridView01);
-        scroll = (Button)findViewById(R.id.scrollView);
-        proBar = (Button)findViewById(R.id.ProgressBar);
-        seekBar = (Button)findViewById(R.id.SeekBar);
-        notify = (Button)findViewById(R.id.Notify);
-        proDia = (Button)findViewById(R.id.button1);
-        get = (Button)findViewById(R.id.get);
-        tab = (Button)findViewById(R.id.tableLayout);
-        tabwid = (Button)findViewById(R.id.tabWidget);
-        chapter = (Button)findViewById(R.id.chapter5);
-        chapter8 = (Button)findViewById(R.id.chapter8);
-        media = (Button)findViewById(R.id.media);
-        
-        radio.setOnClickListener(button);
-        checkbox.setOnClickListener(button);
-        spin.setOnClickListener(button);
-        auto.setOnClickListener(button);
-        data.setOnClickListener(button);
-        exit.setOnClickListener(button);
-        menu.setOnClickListener(button);
-        dialog.setOnClickListener(button);
-        imageButton.setOnClickListener(button);
-        gallery.setOnClickListener(button);
-        switcher.setOnClickListener(button);
-        grid.setOnClickListener(button);
-        scroll.setOnClickListener(button);
-        proBar.setOnClickListener(button);
-        seekBar.setOnClickListener(button);
-        notify.setOnClickListener(button);
-        proDia.setOnClickListener(button);
-        get.setOnClickListener(button);
-        tab.setOnClickListener(button);
-        tabwid.setOnClickListener(button);
-        chapter.setOnClickListener(button);
-        chapter8.setOnClickListener(button);
-        media.setOnClickListener(button);
-        
-        et1.setOnKeyListener(new OnKeyListener(){
-
-			@Override
-			public boolean onKey(View v, int keyCode, KeyEvent event) {
-				// TODO Auto-generated method stub
-				
-				tv1.setText("文板框中内容是2："+et1.getText().toString());
-				
-				return false;
-			}
-        	
-        });
-        
-        
-        et1.addTextChangedListener(new TextWatcher(){
-
-			@Override
-			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
-				// TODO Auto-generated method stub
-				tv1.setText("文板框中内容是3："+et1.getText().toString());
-			}
-
-			@Override
-			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
-				// TODO Auto-generated method stub
-				tv1.setText("文板框中内容是4："+et1.getText().toString());
-			}
-
-			@Override
-			public void afterTextChanged(Editable s) {
-				// TODO Auto-generated method stub
-				tv1.setText("文板框中内容是5："+et1.getText().toString());
-			}
-        	
-        });
+        initWidget();
     }
 
     OnClickListener button = new OnClickListener(){
@@ -266,6 +178,10 @@ public class MainActivity extends Activity {
 				Log.i("Andy", "Media");
 				startActivity(new Intent(MainActivity.this,MainMediaActivity.class));
 				break;
+			case R.id.fragment:
+				Log.i("Andy", "fragment");
+				startActivity(new Intent(MainActivity.this,MyFragment.class));
+				break;
 			default:
 				break;
 			}
@@ -273,7 +189,99 @@ public class MainActivity extends Activity {
 		
 	};
     
-    
+    private void initWidget(){
+    	 tv1 = (TextView)findViewById(R.id.textView1);
+         et1 = (EditText)findViewById(R.id.editText1);
+         et1.setHint("请输入账号：");
+         
+         radio = (Button)findViewById(R.id.Radio);
+         checkbox = (Button)findViewById(R.id.checkbox);
+         spin = (Button)findViewById(R.id.spinner);
+         auto = (Button)findViewById(R.id.auto);
+         data = (Button)findViewById(R.id.date);
+         exit = (Button)findViewById(R.id.exit);
+         menu = (Button)findViewById(R.id.menu);
+         dialog = (Button)findViewById(R.id.dialog);
+         imageButton = (Button)findViewById(R.id.imageButton);
+         gallery = (Button)findViewById(R.id.gallery);
+         switcher = (Button)findViewById(R.id.switcher);
+         grid = (Button)findViewById(R.id.gridView01);
+         scroll = (Button)findViewById(R.id.scrollView);
+         proBar = (Button)findViewById(R.id.ProgressBar);
+         seekBar = (Button)findViewById(R.id.SeekBar);
+         notify = (Button)findViewById(R.id.Notify);
+         proDia = (Button)findViewById(R.id.button1);
+         get = (Button)findViewById(R.id.get);
+         tab = (Button)findViewById(R.id.tableLayout);
+         tabwid = (Button)findViewById(R.id.tabWidget);
+         chapter = (Button)findViewById(R.id.chapter5);
+         chapter8 = (Button)findViewById(R.id.chapter8);
+         media = (Button)findViewById(R.id.media);
+         fragment= (Button)findViewById(R.id.fragment);
+         
+         radio.setOnClickListener(button);
+         checkbox.setOnClickListener(button);
+         spin.setOnClickListener(button);
+         auto.setOnClickListener(button);
+         data.setOnClickListener(button);
+         exit.setOnClickListener(button);
+         menu.setOnClickListener(button);
+         dialog.setOnClickListener(button);
+         imageButton.setOnClickListener(button);
+         gallery.setOnClickListener(button);
+         switcher.setOnClickListener(button);
+         grid.setOnClickListener(button);
+         scroll.setOnClickListener(button);
+         proBar.setOnClickListener(button);
+         seekBar.setOnClickListener(button);
+         notify.setOnClickListener(button);
+         proDia.setOnClickListener(button);
+         get.setOnClickListener(button);
+         tab.setOnClickListener(button);
+         tabwid.setOnClickListener(button);
+         chapter.setOnClickListener(button);
+         chapter8.setOnClickListener(button);
+         media.setOnClickListener(button);
+         fragment.setOnClickListener(button);
+         
+         et1.setOnKeyListener(new OnKeyListener(){
+
+ 			@Override
+ 			public boolean onKey(View v, int keyCode, KeyEvent event) {
+ 				// TODO Auto-generated method stub
+ 				
+ 				tv1.setText("文板框中内容是2："+et1.getText().toString());
+ 				
+ 				return false;
+ 			}
+         	
+         });
+         
+         
+         et1.addTextChangedListener(new TextWatcher(){
+
+ 			@Override
+ 			public void beforeTextChanged(CharSequence s, int start, int count,
+ 					int after) {
+ 				// TODO Auto-generated method stub
+ 				tv1.setText("文板框中内容是3："+et1.getText().toString());
+ 			}
+
+ 			@Override
+ 			public void onTextChanged(CharSequence s, int start, int before,
+ 					int count) {
+ 				// TODO Auto-generated method stub
+ 				tv1.setText("文板框中内容是4："+et1.getText().toString());
+ 			}
+
+ 			@Override
+ 			public void afterTextChanged(Editable s) {
+ 				// TODO Auto-generated method stub
+ 				tv1.setText("文板框中内容是5："+et1.getText().toString());
+ 			}
+         	
+         });
+    }
     
     
 }
