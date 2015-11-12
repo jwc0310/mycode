@@ -9,13 +9,19 @@
         android:layout_width="fill_parent"
         android:layout_height="45dp"
          />
-    
-    <fragment
+     <include
+        android:id="@+id/id_by_bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottombar"
+         />
+    <FrameLayout
         android:layout_below="@id/id_fragment_title"
+        android:layout_above="@id/id_by_bottombar"
         android:id="@+id/id_fragment_content"
-        android:name="com.example.fragment.ContentFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
          />
-    
+   
 </RelativeLayout>

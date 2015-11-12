@@ -8,11 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ContentFragment extends Fragment {
+public class FriendFragment extends Fragment {
 
 	@Override
 	public View onCreateView(LayoutInflater infalter, ViewGroup container, Bundle bundle){
-		return infalter.inflate(R.layout.fragment_weixin, container, false);
+		return infalter.inflate(R.layout.fragment_friend, container, false);
 	}
 	
 }
