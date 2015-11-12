@@ -8,7 +8,10 @@ import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
+import android.widget.Toast;
 
 public class ManagerFragment extends Activity implements FOneBtnClickListener,FTwoBtnClickListener {
 	private FragmentOne mFOne;
@@ -22,12 +25,21 @@ public class ManagerFragment extends Activity implements FOneBtnClickListener,FT
         requestWindowFeature(Window.FEATURE_NO_TITLE);  
         setContentView(R.layout.fragment_manager); 
         
-        FragmentManager fm = getFragmentManager();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.id_manager_content, new FragmentOne(), "ONE");
-        ft.commit();
-        
+        //解决旋转是Fragment多次创建问题
+        if(savedInstanceState == null){
+        	 FragmentManager fm = getFragmentManager();
+             FragmentTransaction ft = fm.beginTransaction();
+             ft.add(R.id.id_manager_content, new FragmentOne(), "ONE");
+             ft.commit();
+        }
+       
     }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		super.onCreateOptionsMenu(menu);
+		//getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
 
 	@Override
 	public void onFTwoBtnClick() {
@@ -45,7 +57,19 @@ public class ManagerFragment extends Activity implements FOneBtnClickListener,FT
 	        tx.addToBackStack(null);  
 	        tx.commit();  
 	}
-
+	 @Override  
+    public boolean onOptionsItemSelected(MenuItem item)  
+    {  
+        switch (item.getItemId())  
+        {  
+        case R.id.action_settings:  
+            Toast.makeText(this, "setting", Toast.LENGTH_SHORT).show();  
+            return true;  
+        default:  
+            //如果希望Fragment自己处理MenuItem点击事件，一定不要忘了调用super.xxx  
+            return super.onOptionsItemSelected(item);  
+        }  
+    }  
 	@Override
 	public void onFOneBtnClick() {
 		// TODO Auto-generated method stub
