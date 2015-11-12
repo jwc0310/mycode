@@ -1,5 +1,6 @@
 package com.example.edittext;
 
+import com.example.fragment.ManagerFragment;
 import com.example.fragment.MyFirstFragment;
 
 import android.app.Activity;
@@ -10,7 +11,7 @@ import android.view.View;
 
 public class MyFragment extends Activity implements View.OnClickListener {
 	
-	private Button firstFrag;
+	private Button firstFrag,managerFrag;
 	
 	@Override
 	protected void onCreate(Bundle bundle){
@@ -21,6 +22,8 @@ public class MyFragment extends Activity implements View.OnClickListener {
 	private void initWidget(){
 		firstFrag = (Button)findViewById(R.id.firstfrag);
 		firstFrag.setOnClickListener(this);
+		managerFrag = (Button)findViewById(R.id.managerfragment);
+		managerFrag.setOnClickListener(this);
 	}
 
 	@Override
@@ -29,6 +32,9 @@ public class MyFragment extends Activity implements View.OnClickListener {
 		switch(v.getId()){
 		case R.id.firstfrag:
 			startActivity(new Intent(MyFragment.this,MyFirstFragment.class));
+			break;
+		case R.id.managerfragment:
+			startActivity(new Intent(MyFragment.this,ManagerFragment.class));
 			break;
 		}
 	}

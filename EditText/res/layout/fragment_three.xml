@@ -3,17 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
+    
+	    <EditText
+        android:id="@+id/fragment_textview_three"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="fragment three " />
 
     <Button
-        android:id="@+id/firstfrag"
+        android:id="@+id/fragment_button_three"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FristFrag" />
-
-    <Button
-        android:id="@+id/managerfragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ManFrag" />
-
+        android:text="Button in fragment three" />
+    
 </LinearLayout>
