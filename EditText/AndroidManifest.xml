@@ -79,6 +79,7 @@
         <activity android:name="MyFragment"></activity>
         <activity android:name="com.example.fragment.MyFirstFragment"></activity>
         <activity android:name="com.example.fragment.ManagerFragment"></activity>
+        <activity android:name="com.example.fragment.MyDialogFragment"></activity>
         
     </application>
 
