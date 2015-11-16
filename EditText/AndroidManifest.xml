@@ -80,6 +80,8 @@
         <activity android:name="com.example.fragment.MyFirstFragment"></activity>
         <activity android:name="com.example.fragment.ManagerFragment"></activity>
         <activity android:name="com.example.fragment.MyDialogFragment"></activity>
+        <activity android:name="com.example.fragment.TabFragment"></activity>
+        <activity android:name="com.example.fragment.TraditionalViewpager"></activity>
         
     </application>
 

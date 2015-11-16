@@ -3,6 +3,7 @@ package com.example.edittext;
 import com.example.fragment.ManagerFragment;
 import com.example.fragment.MyDialogFragment;
 import com.example.fragment.MyFirstFragment;
+import com.example.fragment.TabFragment;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,7 +14,7 @@ import android.view.View;
 public class MyFragment extends Activity implements View.OnClickListener {
 	
 	private Button firstFrag,managerFrag;
-	private Button dialogFrag;
+	private Button dialogFrag,tabFrag;
 	
 	@Override
 	protected void onCreate(Bundle bundle){
@@ -28,6 +29,9 @@ public class MyFragment extends Activity implements View.OnClickListener {
 		managerFrag.setOnClickListener(this);
 		dialogFrag = (Button)findViewById(R.id.dialog_frag);
 		dialogFrag.setOnClickListener(this);
+		tabFrag = (Button)findViewById(R.id.tab_fragment);
+		tabFrag.setOnClickListener(this);
+		
 	}
 
 	@Override
@@ -42,6 +46,9 @@ public class MyFragment extends Activity implements View.OnClickListener {
 			break;
 		case R.id.dialog_frag:
 			startActivity(new Intent(MyFragment.this,MyDialogFragment.class));
+			break;
+		case R.id.tab_fragment:
+			startActivity(new Intent(MyFragment.this,TabFragment.class));
 			break;
 		}
 	}
