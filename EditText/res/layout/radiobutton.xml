@@ -49,4 +49,16 @@
         android:layout_height="wrap_content"
         android:text="BackMain" />
 
+    <Button
+        android:id="@+id/testIntent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="testIntent" />
+
+    <Button
+        android:id="@+id/backHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="backHome" />
+
 </LinearLayout>

@@ -47,8 +47,10 @@ public class MainActivity extends Activity {
 			case R.id.Radio:
 				Intent toRadio = new Intent();
 				toRadio.setClass(MainActivity.this, LearnRadioButton.class);
+				toRadio.putExtra("testIntent", "I am Andy !");
+				toRadio.putExtra("One", "number1");
+				toRadio.putExtra("Two", "number2");
 				startActivity(toRadio);
-				MainActivity.this.finish();
 				break;
 			case R.id.checkbox:
 				Intent toCheckbox = new Intent();
@@ -60,13 +62,11 @@ public class MainActivity extends Activity {
 				Intent toSpinner = new Intent();
 				toSpinner.setClass(MainActivity.this, learnSpinner.class);
 				startActivity(toSpinner);
-				MainActivity.this.finish();
 				break;
 			case R.id.auto:
 				Intent toAuto = new Intent();
 				toAuto.setClass(MainActivity.this, auto.class);
 				startActivity(toAuto);
-				MainActivity.this.finish();
 				break;
 			case R.id.date:
 				Intent toData = new Intent();
