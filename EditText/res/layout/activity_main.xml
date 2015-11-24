@@ -281,6 +281,14 @@
 		        android:layout_centerHorizontal="true"
 		        android:text="Fragment" />
 
+		    <Button
+		        android:id="@+id/binderservice"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/fragment"
+		        android:layout_centerHorizontal="true"
+		        android:text="Binder" />
+
 		</RelativeLayout>
     
     </RelativeLayout>

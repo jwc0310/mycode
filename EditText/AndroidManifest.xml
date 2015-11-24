@@ -82,6 +82,12 @@
         <activity android:name="com.example.fragment.MyDialogFragment"></activity>
         <activity android:name="com.example.fragment.TabFragment"></activity>
         <activity android:name="com.example.fragment.TraditionalViewpager"></activity>
+        <activity android:name="com.example.binderservice.BinderService"></activity>
+        
+        
+        
+        <service android:name="com.example.binderservice.LocalService"></service>
+        <!-- android:process=":remote" specify this service run in another process in the same application -->
         
     </application>
 

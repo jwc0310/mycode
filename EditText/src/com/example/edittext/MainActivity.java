@@ -1,5 +1,6 @@
 package com.example.edittext;
 
+import com.example.binderservice.BinderService;
 import com.example.media.MainMediaActivity;
 import com.example.net.NetActivity;
 
@@ -28,7 +29,7 @@ public class MainActivity extends Activity {
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
-	private Button media,fragment;
+	private Button media,fragment,binder;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,6 +183,10 @@ public class MainActivity extends Activity {
 				Log.i("Andy", "fragment");
 				startActivity(new Intent(MainActivity.this,MyFragment.class));
 				break;
+			case R.id.binderservice:
+				Log.i("Andy", "binderservice");
+				startActivity(new Intent(MainActivity.this,BinderService.class));
+				break;
 			default:
 				break;
 			}
@@ -218,6 +223,7 @@ public class MainActivity extends Activity {
          chapter8 = (Button)findViewById(R.id.chapter8);
          media = (Button)findViewById(R.id.media);
          fragment= (Button)findViewById(R.id.fragment);
+         binder = (Button)findViewById(R.id.binderservice);
          
          radio.setOnClickListener(button);
          checkbox.setOnClickListener(button);
@@ -243,6 +249,7 @@ public class MainActivity extends Activity {
          chapter8.setOnClickListener(button);
          media.setOnClickListener(button);
          fragment.setOnClickListener(button);
+         binder.setOnClickListener(button);
          
          et1.setOnKeyListener(new OnKeyListener(){
 
