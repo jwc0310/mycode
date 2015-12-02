@@ -1,5 +1,6 @@
 package com.example.edittext;
 
+import com.example.JSON.LearnJSON;
 import com.example.binderservice.BinderService;
 import com.example.media.MainMediaActivity;
 import com.example.net.NetActivity;
@@ -29,7 +30,7 @@ public class MainActivity extends Activity {
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
-	private Button media,fragment,binder;
+	private Button media,fragment,binder,json;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,6 +188,10 @@ public class MainActivity extends Activity {
 				Log.i("Andy", "binderservice");
 				startActivity(new Intent(MainActivity.this,BinderService.class));
 				break;
+			case R.id.json:
+				Log.i("Andy", "json");
+				startActivity(new Intent(MainActivity.this,LearnJSON.class));
+				break;
 			default:
 				break;
 			}
@@ -224,6 +229,7 @@ public class MainActivity extends Activity {
          media = (Button)findViewById(R.id.media);
          fragment= (Button)findViewById(R.id.fragment);
          binder = (Button)findViewById(R.id.binderservice);
+         json = (Button)findViewById(R.id.json);
          
          radio.setOnClickListener(button);
          checkbox.setOnClickListener(button);
@@ -250,6 +256,7 @@ public class MainActivity extends Activity {
          media.setOnClickListener(button);
          fragment.setOnClickListener(button);
          binder.setOnClickListener(button);
+         json.setOnClickListener(button);
          
          et1.setOnKeyListener(new OnKeyListener(){
 

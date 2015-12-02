@@ -83,6 +83,7 @@
         <activity android:name="com.example.fragment.TabFragment"></activity>
         <activity android:name="com.example.fragment.TraditionalViewpager"></activity>
         <activity android:name="com.example.binderservice.BinderService"></activity>
+        <activity android:name="com.example.JSON.LearnJSON"></activity>
         
         
         
