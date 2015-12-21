@@ -1,6 +1,8 @@
-package com.example.JSON;
+package com.andy.utils.json;
 
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,21 +11,52 @@ import org.json.JSONStringer;
 import org.json.JSONException;
 import org.json.JSONTokener;
 
+import com.andy.utils.LG;
+import com.andy.utils.parsexml.DomParseXml;
+import com.andy.utils.parsexml.River;
 import com.example.edittext.R;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class LearnJSON extends Activity {
+	
+	ListView riverlist;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_json);
 		
+		List<River> rivers = new ArrayList<River>();
+		String fileName = "river.xml";
+		DomParseXml dpx = new DomParseXml(this);
+		rivers = dpx.ParseXmlWithDom(fileName);
+		
+		for(River obj: rivers){
+			LG.i(getClass(), obj.getName());
+			LG.i(getClass(), String.valueOf(obj.getLength()));
+			LG.i(getClass(), obj.getIntroduction());
+			LG.i(getClass(), obj.getImageurl());
+		}
+	
+		riverlist = (ListView)findViewById(R.id.river_list);
+		if(riverlist == null){
+			LG.i(getClass(), "riverlist---null");
+		}
+		
+		RiverAdapter adapter = new RiverAdapter(this,rivers);
+		if(adapter == null){
+			LG.i(getClass(), "adapter---null");
+		}
+		
+		riverlist.setAdapter(adapter);
+		
 		Log.i("Andy", "----------------JSONObject-------------------------------------");
+		LG.i(getClass(), "----------------JSONObject-------");
 		
 		// 假设现在要创建这样一个json文本   person
 	//  {  

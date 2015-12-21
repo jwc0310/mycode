@@ -4,7 +4,7 @@ import android.util.Log;
 
 /**
  * 对Log级别进行管理
- * Debug作为开关
+ * currentLogLevel 设置级别
  * @author	Andy
  * @email	jwc0310@163.com
  */

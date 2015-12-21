@@ -94,7 +94,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/auto"
 		        android:layout_below="@+id/auto"
-		        android:text="menu" />
+		        android:text="Dialer" />
 	
 		    <Button
 		        android:id="@+id/exit"
@@ -295,7 +295,7 @@
 		        android:layout_height="wrap_content"
 		        android:layout_alignRight="@+id/binderservice"
 		        android:layout_below="@+id/binderservice"
-		        android:text="Json" />
+		        android:text="JsonXml" />
 
 		</RelativeLayout>
     
