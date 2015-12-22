@@ -2,6 +2,7 @@ package com.andy.utils.json;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 import org.json.JSONArray;
@@ -13,49 +14,54 @@ import org.json.JSONTokener;
 
 import com.andy.utils.LG;
 import com.andy.utils.parsexml.DomParseXml;
+import com.andy.utils.parsexml.ParseXml;
 import com.andy.utils.parsexml.River;
 import com.example.edittext.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class LearnJSON extends Activity {
+public class LearnJSON extends Activity implements OnClickListener{
 	
-	ListView riverlist;
+	private final static int Update = 0;
 	
+	private ListView riverlist;
+	private Button b_dom, b_sax, b_pull, b_clear;
+	private static List<River> rivers = new ArrayList<River>();;
+	private RiverAdapter adapter = new RiverAdapter(this,rivers);
+	private final static String fileName = "river.xml";
+	ParseXml px;
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_json);
+
+		px = new DomParseXml(this);
 		
-		List<River> rivers = new ArrayList<River>();
-		String fileName = "river.xml";
-		DomParseXml dpx = new DomParseXml(this);
-		rivers = dpx.ParseXmlWithDom(fileName);
-		
-		for(River obj: rivers){
-			LG.i(getClass(), obj.getName());
-			LG.i(getClass(), String.valueOf(obj.getLength()));
-			LG.i(getClass(), obj.getIntroduction());
-			LG.i(getClass(), obj.getImageurl());
-		}
-	
+		b_dom = (Button)findViewById(R.id.dom);
+		b_dom.setOnClickListener(this);
+		b_sax = (Button)findViewById(R.id.sax);
+		b_sax.setOnClickListener(this);
+		b_pull = (Button)findViewById(R.id.pull);
+		b_pull.setOnClickListener(this);
+		b_clear = (Button)findViewById(R.id.clear);
+		b_clear.setOnClickListener(this);
+
+		//rivers = new ArrayList<River>();
 		riverlist = (ListView)findViewById(R.id.river_list);
-		if(riverlist == null){
-			LG.i(getClass(), "riverlist---null");
-		}
-		
-		RiverAdapter adapter = new RiverAdapter(this,rivers);
-		if(adapter == null){
-			LG.i(getClass(), "adapter---null");
-		}
-		
 		riverlist.setAdapter(adapter);
 		
-		Log.i("Andy", "----------------JSONObject-------------------------------------");
+		
+		
+		
 		LG.i(getClass(), "----------------JSONObject-------");
 		
 		// 假设现在要创建这样一个json文本   person
@@ -214,4 +220,49 @@ public class LearnJSON extends Activity {
 		}
 		
 	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		LG.i(getClass(), String.valueOf(v.getId()));
+		
+		switch(v.getId()){
+		case R.id.dom:
+			rivers.addAll((Collection<? extends River>) px.parseXml(fileName));
+			Message msg = new Message();
+			msg.what = Update;
+			myHandler.sendMessage(msg);
+			break;
+		case R.id.sax:
+			break;
+		case R.id.pull:
+			break;
+		case R.id.clear:
+			rivers.clear();
+			Message msg1 = new Message();
+			msg1.what = Update;
+			myHandler.sendMessage(msg1);
+			break;
+		}
+	}
+	
+	Handler myHandler = new Handler(){
+		public void handleMessage(Message msg){
+			LG.i(getClass(), String.valueOf(msg.what));
+			switch(msg.what){
+			case Update:
+				for(River obj: rivers){
+					LG.i(getClass(), obj.getName());
+					LG.i(getClass(), String.valueOf(obj.getLength()));
+					LG.i(getClass(), obj.getIntroduction());
+					LG.i(getClass(), obj.getImageurl());
+				}
+				adapter.notifyDataSetChanged();
+				break;
+			}
+			super.handleMessage(msg);
+		}
+		
+	};
+	
 }

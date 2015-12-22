@@ -2,6 +2,7 @@ package com.andy.utils.json;
 
 import java.util.List;
 
+import com.andy.utils.LG;
 import com.andy.utils.parsexml.River;
 import com.example.edittext.R;
 
@@ -51,12 +52,21 @@ public class RiverAdapter extends BaseAdapter {
 			holder.length = (TextView)convertView.findViewById(R.id.river_length);
 			holder.content = (TextView)convertView.findViewById(R.id.river_content);
 			holder.url = (TextView)convertView.findViewById(R.id.river_image);
+			convertView.setTag(holder);
 		}else{
 			holder = (ViewHolder)convertView.getTag();
 		}
+		//LG.i(getClass(), r.getName());
+		//LG.i(getClass(), String.valueOf(r.getLength()));
+		//LG.i(getClass(), r.getIntroduction());
+		//LG.i(getClass(), r.getImageurl());
 		
+		holder.name.setText(r.getName());
+		holder.length.setText(String.valueOf(r.getLength()));
+		holder.content.setText(r.getIntroduction());
+		holder.url.setText(r.getImageurl());
 		
-		return null;
+		return convertView;
 	}
 	
 	private class ViewHolder{

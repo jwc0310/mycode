@@ -13,10 +13,11 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 
 import com.andy.utils.LG;
+import com.andy.utils.T;
 
 import android.content.Context;
 
-public class DomParseXml {
+public class DomParseXml implements ParseXml {
 	
 	
 	Context context;
@@ -38,7 +39,7 @@ public class DomParseXml {
 	 * 
 	 */
 	
-	public List<River> ParseXmlWithDom(String fileName){
+	private List<River> ParseXmlWithDom(String fileName){
 		
 		LG.i(getClass(), "entry");
 		List<River> rivers = new ArrayList<River>();
@@ -51,32 +52,17 @@ public class DomParseXml {
 		//首先找到xml文件
 		factory=DocumentBuilderFactory.newInstance();
 
-		if(factory == null){
-			LG.i(getClass(), "factory is null");
-		}
-
 		try{
 			//找到xml,加载文档
 			builder = factory.newDocumentBuilder();
 			
-			if(builder == null){
-				LG.i(getClass(), "builder is null");
-			}
-
 			inputStream = this.context.getResources().getAssets().open(fileName);
-			if(inputStream == null){
-				LG.i(getClass(), "inputStream is null");
-			}
 
 			document = builder.parse(inputStream);
 			//找到根Elements
 			Element root = document.getDocumentElement();
 			NodeList nodes = root.getElementsByTagName(River.RIVER);
-			
-			if(nodes == null){
-				LG.i(getClass(), "nodes is null");
-			}
-			
+
 			//遍历根节点所有子节点,rivers下所有river
 			River river= null;
 
@@ -89,14 +75,14 @@ public class DomParseXml {
 				river.setName(riverElement.getAttribute("name"));
 
 				river.setLength(Integer.parseInt(riverElement.getAttribute("length")));
-				
+
 				//获取river下introduction标签
 				Element intro=(Element)riverElement.getElementsByTagName("introduction").item(0);
 				river.setIntroduction(intro.getFirstChild().getNodeValue());
-				
+
 				Element imageUrl=(Element)riverElement.getElementsByTagName("imageurl").item(0);
 				river.setImageurl(imageUrl.getFirstChild().getNodeValue());
-				
+
 				rivers.add(river);
 			}
 			
@@ -110,11 +96,15 @@ public class DomParseXml {
 				e.printStackTrace();
 			}
 			LG.i(getClass(), "exit");
-			
 		}
 		
 		return rivers;
-		
+	}
+
+	@Override
+	public List<River> parseXml(String fileName) {
+		// TODO Auto-generated method stub
+		return ParseXmlWithDom(fileName);
 	}
 	
 }
