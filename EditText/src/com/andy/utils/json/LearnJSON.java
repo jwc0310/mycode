@@ -15,6 +15,7 @@ import org.json.JSONTokener;
 import com.andy.utils.LG;
 import com.andy.utils.parsexml.DomParseXml;
 import com.andy.utils.parsexml.ParseXml;
+import com.andy.utils.parsexml.PullParseXml;
 import com.andy.utils.parsexml.River;
 import com.andy.utils.parsexml.SAXParseXml;
 import com.example.edittext.R;
@@ -226,27 +227,24 @@ public class LearnJSON extends Activity implements OnClickListener{
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		LG.i(getClass(), String.valueOf(v.getId()));
-		
+		Message msg = new Message();
+		msg.what = Update;
 		switch(v.getId()){
 		case R.id.dom:
 			rivers.addAll((Collection<? extends River>) px.parseXml(fileName));
-			Message msg = new Message();
-			msg.what = Update;
 			myHandler.sendMessage(msg);
 			break;
 		case R.id.sax:
 			rivers = new SAXParseXml(this).parseXml(fileName);
-			Message msg2 = new Message();
-			msg2.what = Update;
-			myHandler.sendMessage(msg2);
+			myHandler.sendMessage(msg);
 			break;
 		case R.id.pull:
+			rivers = new PullParseXml(this).parseXml(fileName);
+			myHandler.sendMessage(msg);
 			break;
 		case R.id.clear:
 			rivers.clear();
-			Message msg1 = new Message();
-			msg1.what = Update;
-			myHandler.sendMessage(msg1);
+			myHandler.sendMessage(msg);
 			break;
 		}
 	}

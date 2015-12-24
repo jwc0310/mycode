@@ -1,6 +1,6 @@
 package com.example.edittext;
 
-import com.example.JSON.LearnJSON;
+import com.andy.utils.json.LearnJSON;
 import com.example.binderservice.BinderService;
 import com.example.media.MainMediaActivity;
 import com.example.net.NetActivity;
