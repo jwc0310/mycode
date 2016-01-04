@@ -33,6 +33,9 @@ public class TabWid extends TabActivity {
 		mTabHost.addTab(mTabHost.newTabSpec("tab_test3")
 				.setIndicator("TAB 3",getResources().getDrawable(R.drawable.ic_menu_all_contacts_dk))
 				.setContent(R.id.tv3));
+		mTabHost.addTab(mTabHost.newTabSpec("tab_andy1")
+				.setIndicator("Andy 1",null)
+				.setContent(R.id.viewPager1));
 		
 		//set TabHost background color
 		mTabHost.setBackgroundColor(Color.argb(150, 22, 70, 150));

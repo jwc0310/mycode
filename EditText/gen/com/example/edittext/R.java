@@ -83,8 +83,8 @@ public final class R {
         public static final int SeekBar=0x7f0a001d;
         public static final int TextView01=0x7f0a008f;
         public static final int TextView1=0x7f0a003c;
-        public static final int about=0x7f0a00b0;
-        public static final int action_settings=0x7f0a00b1;
+        public static final int about=0x7f0a00b1;
+        public static final int action_settings=0x7f0a00b2;
         public static final int android=0x7f0a002b;
         public static final int apache=0x7f0a002a;
         public static final int auto=0x7f0a0010;
@@ -170,8 +170,8 @@ public final class R {
         public static final int id_text_password=0x7f0a005d;
         public static final int id_text_username=0x7f0a005c;
         public static final int id_text_your_name=0x7f0a0059;
-        public static final int id_title_left_btn=0x7f0a00ae;
-        public static final int id_viewpager=0x7f0a00af;
+        public static final int id_title_left_btn=0x7f0a00af;
+        public static final int id_viewpager=0x7f0a00b0;
         public static final int imageButton=0x7f0a0017;
         public static final int imageButton1=0x7f0a0041;
         public static final int imageButton2=0x7f0a0043;
@@ -245,6 +245,7 @@ public final class R {
         public static final int tv_tabName=0x7f0a0061;
         public static final int tween=0x7f0a0039;
         public static final int videoView1=0x7f0a007b;
+        public static final int viewPager1=0x7f0a00ae;
     }
     public static final class layout {
         public static final int activity_button=0x7f030000;

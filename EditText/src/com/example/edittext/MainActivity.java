@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
 				Intent toCheckbox = new Intent();
 				toCheckbox.setClass(MainActivity.this, learnCheckBox.class);
 				startActivity(toCheckbox);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.spinner:
 				Intent toSpinner = new Intent();
@@ -74,7 +74,7 @@ public class MainActivity extends Activity {
 				Intent toData = new Intent();
 				toData.setClass(MainActivity.this, date.class);
 				startActivity(toData);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.exit:
 				MainActivity.this.finish();
@@ -83,69 +83,69 @@ public class MainActivity extends Activity {
 				Intent toMenu = new Intent();
 				toMenu.setClass(MainActivity.this, menu.class);
 				startActivity(toMenu);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.dialog:
 				Intent toDialog = new Intent();
 				toDialog.setClass(MainActivity.this, LearnDialog.class);
 				startActivity(toDialog);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 				
 			case R.id.imageButton:
 				Intent toImagebutton = new Intent();
 				toImagebutton.setClass(MainActivity.this, LearnImagebutton.class);
 				startActivity(toImagebutton);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.gallery:
 				Intent togallery = new Intent();
 				togallery.setClass(MainActivity.this, gallery.class);
 				startActivity(togallery);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.switcher:
 				Intent toswitcher = new Intent();
 				toswitcher.setClass(MainActivity.this, imageSwitcher.class);
 				startActivity(toswitcher);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.gridView01:
 				Intent toGrid = new Intent();
 				toGrid.setClass(MainActivity.this, gridView.class);
 				startActivity(toGrid);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.scrollView:
 				Intent toScroll = new Intent();
 				toScroll.setClass(MainActivity.this, scroll.class);
 				startActivity(toScroll);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.ProgressBar:
 				Intent toPro = new Intent();
 				toPro.setClass(MainActivity.this, Probar.class);
 				startActivity(toPro);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.SeekBar:
 				Intent toSeek = new Intent();
 				toSeek.setClass(MainActivity.this, Seek.class);
 				startActivity(toSeek);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.Notify:
 				Intent toNotify = new Intent();
 				toNotify.setClass(MainActivity.this, Notify.class);
 				startActivity(toNotify);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.button1:
 				Log.i("Andy", "button1");
 				Intent toB = new Intent();
 				toB.setClass(MainActivity.this, ProDia.class);
 				startActivity(toB);
-				MainActivity.this.finish();
+				//MainActivity.this.finish();
 				break;
 			case R.id.get:
 				Log.i("Andy", "get");
