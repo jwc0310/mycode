@@ -83,7 +83,6 @@ public class MainActivity extends Activity {
 				Intent toMenu = new Intent();
 				toMenu.setClass(MainActivity.this, menu.class);
 				startActivity(toMenu);
-				//MainActivity.this.finish();
 				break;
 			case R.id.dialog:
 				Intent toDialog = new Intent();

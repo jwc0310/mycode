@@ -94,7 +94,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/auto"
 		        android:layout_below="@+id/auto"
-		        android:text="Dialer" />
+		        android:text="Http" />
 	
 		    <Button
 		        android:id="@+id/exit"
