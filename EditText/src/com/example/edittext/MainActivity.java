@@ -1,5 +1,7 @@
 package com.example.edittext;
 
+import com.andy.opensource.fw.imageloader.ImageLoaderDemo;
+import com.andy.utils.LG;
 import com.andy.utils.json.LearnJSON;
 import com.example.binderservice.BinderService;
 import com.example.media.MainMediaActivity;
@@ -23,14 +25,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	private TextView tv1;
-	private EditText et1;
 	private Button radio,checkbox,spin,auto,data;
 	private Button exit,menu,dialog,imageButton;
 	private Button gallery,switcher,grid,scroll;
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
 	private Button media,fragment,binder,json;
+	private Button ImageLoader;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,10 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch(v.getId()){
+			case R.id.ImageLoader:
+				LG.v(getClass(), "ImageLoader");
+				startActivity(new Intent(MainActivity.this,ImageLoaderDemo.class));
+				break;
 			case R.id.Radio:
 				Intent toRadio = new Intent();
 				toRadio.setClass(MainActivity.this, LearnRadioButton.class);
@@ -199,9 +204,6 @@ public class MainActivity extends Activity {
 	};
     
     private void initWidget(){
-    	 tv1 = (TextView)findViewById(R.id.textView1);
-         et1 = (EditText)findViewById(R.id.editText1);
-         et1.setHint("请输入账号：");
          
          radio = (Button)findViewById(R.id.Radio);
          checkbox = (Button)findViewById(R.id.checkbox);
@@ -229,6 +231,8 @@ public class MainActivity extends Activity {
          fragment= (Button)findViewById(R.id.fragment);
          binder = (Button)findViewById(R.id.binderservice);
          json = (Button)findViewById(R.id.json);
+         ImageLoader = (Button)findViewById(R.id.ImageLoader);
+         ImageLoader.setOnClickListener(button);
          
          radio.setOnClickListener(button);
          checkbox.setOnClickListener(button);
@@ -257,43 +261,6 @@ public class MainActivity extends Activity {
          binder.setOnClickListener(button);
          json.setOnClickListener(button);
          
-         et1.setOnKeyListener(new OnKeyListener(){
-
- 			@Override
- 			public boolean onKey(View v, int keyCode, KeyEvent event) {
- 				// TODO Auto-generated method stub
- 				
- 				tv1.setText("文板框中内容是2："+et1.getText().toString());
- 				
- 				return false;
- 			}
-         	
-         });
-         
-         
-         et1.addTextChangedListener(new TextWatcher(){
-
- 			@Override
- 			public void beforeTextChanged(CharSequence s, int start, int count,
- 					int after) {
- 				// TODO Auto-generated method stub
- 				tv1.setText("文板框中内容是3："+et1.getText().toString());
- 			}
-
- 			@Override
- 			public void onTextChanged(CharSequence s, int start, int before,
- 					int count) {
- 				// TODO Auto-generated method stub
- 				tv1.setText("文板框中内容是4："+et1.getText().toString());
- 			}
-
- 			@Override
- 			public void afterTextChanged(Editable s) {
- 				// TODO Auto-generated method stub
- 				tv1.setText("文板框中内容是5："+et1.getText().toString());
- 			}
-         	
-         });
     }
     
     

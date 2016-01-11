@@ -4,40 +4,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
     >
-
-    <RelativeLayout 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" 
-        android:id="@+id/rl0"
-        >
-	    <RelativeLayout 
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:orientation="vertical" 
-	        android:id="@+id/rl1"
-	        >
-	        
-	        <TextView
-	        android:id="@+id/textView1"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:text="文本框中的内容是1：" />
-	
-		    <EditText
-		        android:id="@+id/editText1"
-		        android:layout_width="fill_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_alignParentLeft="true"
-		        android:layout_below="@+id/textView1"
-		        android:ems="10" >
-		
-		        <requestFocus />
-		    </EditText>
-	    
-       	</RelativeLayout>
-       
-    </RelativeLayout>
     
     <RelativeLayout
         android:id="@+id/rl02"
@@ -131,7 +97,16 @@
 		        android:layout_alignRight="@id/dialog"
 		        android:layout_below="@id/dialog"
 		        android:text="ProDlg" />
-	        
+
+		    <Button
+		        android:id="@+id/ImageLoader"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@+id/button1"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@+id/button1"
+		        android:layout_centerHorizontal="true"
+		        android:text="IgLder" />
 	
 	    	</RelativeLayout>
     
@@ -278,7 +253,9 @@
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_below="@+id/media"
+		        android:layout_alignParentLeft="true"
 		        android:layout_centerHorizontal="true"
+		        android:layout_alignRight="@id/chapter8"
 		        android:text="Fragment" />
 
 		    <Button
@@ -287,12 +264,15 @@
 		        android:layout_height="wrap_content"
 		        android:layout_below="@+id/fragment"
 		        android:layout_centerHorizontal="true"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@id/chapter8"
 		        android:text="Binder" />
 
 		    <Button
 		        android:id="@+id/json"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/binderservice"
 		        android:layout_below="@+id/binderservice"
 		        android:text="JsonXml" />
@@ -300,11 +280,5 @@
 		</RelativeLayout>
     
     </RelativeLayout>
-    
-    
-    
-    
-    
-    
 
 </RelativeLayout>
