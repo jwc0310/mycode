@@ -3,7 +3,7 @@ package com.andy.utils.json;
 import java.util.List;
 
 import com.andy.utils.LG;
-import com.andy.utils.parsexml.River;
+import com.andy.utils.parsexml.Apn;
 import com.example.edittext.R;
 
 import android.content.Context;
@@ -13,25 +13,28 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class RiverAdapter extends BaseAdapter {
+public class ApnAdapter extends BaseAdapter {
 
+	private List<Apn> apn;
 	private Context context;
-	private List<River> rivers;
-	public RiverAdapter(Context context, List<River> rivers){
+	
+	public ApnAdapter(Context context,List<Apn> apn){
+		this.apn = apn;
 		this.context = context;
-		this.rivers = rivers;
 	}
 	
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return rivers.size();
+		LG.i(getClass(), Integer.toString(apn.size()));
+		return apn.size();
 	}
 
 	@Override
-	public River getItem(int position) {
+	public Object getItem(int position) {
 		// TODO Auto-generated method stub
-		return rivers.get(position);
+		LG.i(getClass(), apn.get(position).toString());
+		return apn.get(position);
 	}
 
 	@Override
@@ -44,32 +47,24 @@ public class RiverAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		ViewHolder holder = null;
-		River r = rivers.get(position);
+		Apn a = apn.get(position);
 		if(convertView == null){
 			holder = new ViewHolder();
-			convertView = LayoutInflater.from(this.context).inflate(R.layout.json_adapter,null);
-			holder.name = (TextView)convertView.findViewById(R.id.river_name);
-			holder.length = (TextView)convertView.findViewById(R.id.river_length);
-			holder.content = (TextView)convertView.findViewById(R.id.river_content);
-			holder.url = (TextView)convertView.findViewById(R.id.river_image);
+			convertView = LayoutInflater.from(this.context).inflate(R.layout.apn_list, null);
+			holder.tv = (TextView)convertView.findViewById(R.id.apn);
 			convertView.setTag(holder);
+			
 		}else{
 			holder = (ViewHolder)convertView.getTag();
 		}
-		
-		holder.name.setText(r.getName());
-		holder.length.setText(String.valueOf(r.getLength()));
-		holder.content.setText(r.getIntroduction());
-		holder.url.setText(r.getImageurl());
+		LG.i(getClass(), a.toString());
+		holder.tv.setText(a.toString());
 		
 		return convertView;
 	}
 	
 	private class ViewHolder{
-		TextView name;
-		TextView length;
-		TextView content;
-		TextView url;
+		TextView tv;
 	}
 
 }

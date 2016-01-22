@@ -13,8 +13,10 @@ import org.json.JSONException;
 import org.json.JSONTokener;
 
 import com.andy.utils.LG;
+import com.andy.utils.parsexml.Apn;
 import com.andy.utils.parsexml.DomParseXml;
 import com.andy.utils.parsexml.ParseXml;
+import com.andy.utils.parsexml.PullParseApnXml;
 import com.andy.utils.parsexml.PullParseXml;
 import com.andy.utils.parsexml.River;
 import com.andy.utils.parsexml.SAXParseXml;
@@ -34,12 +36,18 @@ import android.widget.TextView;
 public class LearnJSON extends Activity implements OnClickListener{
 	
 	private final static int Update = 0;
+	private final static int Update_Apn = 1;
 	
 	private ListView riverlist;
 	private Button b_dom, b_sax, b_pull, b_clear;
-	private static List<River> rivers = new ArrayList<River>();;
+	private static List<River> rivers = new ArrayList<River>();
+	private List<Apn> apns = new ArrayList<Apn>();
+	
 	private RiverAdapter adapter = new RiverAdapter(this,rivers);
+	
+	private ApnAdapter adapter1 = new ApnAdapter(this,apns);
 	private final static String fileName = "river.xml";
+	private final static String fileName1 = "labtest-apns-conf.xml";
 	ParseXml px;
 	@Override
 	protected void onCreate(Bundle savedInstanceState){
@@ -57,9 +65,14 @@ public class LearnJSON extends Activity implements OnClickListener{
 		b_clear = (Button)findViewById(R.id.clear);
 		b_clear.setOnClickListener(this);
 
+		Apn a1 = new Apn("a1");
+		Apn a2 = new Apn("a2");
+		apns.add(a1);
+		apns.add(a2);
+		
 		//rivers = new ArrayList<River>();
 		riverlist = (ListView)findViewById(R.id.river_list);
-		riverlist.setAdapter(adapter);
+		riverlist.setAdapter(adapter1);
 		
 		
 		
@@ -222,32 +235,6 @@ public class LearnJSON extends Activity implements OnClickListener{
 		}
 		
 	}
-
-	@Override
-	public void onClick(View v) {
-		// TODO Auto-generated method stub
-		LG.i(getClass(), String.valueOf(v.getId()));
-		Message msg = new Message();
-		msg.what = Update;
-		switch(v.getId()){
-		case R.id.dom:
-			rivers.addAll((Collection<? extends River>) px.parseXml(fileName));
-			myHandler.sendMessage(msg);
-			break;
-		case R.id.sax:
-			rivers = new SAXParseXml(this).parseXml(fileName);
-			myHandler.sendMessage(msg);
-			break;
-		case R.id.pull:
-			rivers = new PullParseXml(this).parseXml(fileName);
-			myHandler.sendMessage(msg);
-			break;
-		case R.id.clear:
-			rivers.clear();
-			myHandler.sendMessage(msg);
-			break;
-		}
-	}
 	
 	Handler myHandler = new Handler(){
 		public void handleMessage(Message msg){
@@ -260,12 +247,67 @@ public class LearnJSON extends Activity implements OnClickListener{
 					LG.i(getClass(), obj.getIntroduction());
 					LG.i(getClass(), obj.getImageurl());
 				}
-				adapter.notifyDataSetChanged();
+				//adapter.notifyDataSetChanged();
+				break;
+			case Update_Apn:
+				for(Apn apne: apns){
+					//LG.i(getClass(), apne.toString());
+				}
+				//LG.i(getClass(), "---------");
+				adapter1.notifyDataSetChanged();
 				break;
 			}
 			super.handleMessage(msg);
 		}
 		
 	};
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		LG.i(getClass(), String.valueOf(v.getId()));
+		Message msg = new Message();
+		msg.what = Update;
+		
+		Message msg1 = new Message();
+		msg1.what = Update_Apn;
+		
+		switch(v.getId()){
+		case R.id.dom:
+			rivers.addAll((Collection<? extends River>) px.parseXml(fileName));
+			myHandler.sendMessage(msg);
+			break;
+		case R.id.sax:
+			
+			rivers = new SAXParseXml(this).parseXml(fileName);
+			riverlist.setAdapter(adapter);
+			myHandler.sendMessage(msg);
+			break;
+		case R.id.pull:
+			//rivers = new PullParseXml(this).parseXml(fileName);
+			new PullParseApnXml(this,apns).parseXml(fileName1);
+			LG.i(getClass(), "------apns size is "+apns.size()+" ------");
+			if(apns.size() == 0){
+				LG.i(getClass(), "meiyou qudao zhi");
+			}else{
+				
+				myHandler.sendMessage(msg1);
+			}
+			
+			break;
+		case R.id.clear:
+			if(rivers != null || rivers.size() != 0){
+				rivers.clear();
+				myHandler.sendMessage(msg);
+			}
+			if(apns != null || apns.size() != 0){
+				apns.clear();
+				myHandler.sendMessage(msg1);
+			}
+			
+			break;
+		}
+	}
+
 	
 }

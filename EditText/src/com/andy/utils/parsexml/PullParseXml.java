@@ -67,10 +67,8 @@ public class PullParseXml implements ParseXml {
 					break;
 					
 				}
-				
 				eventType = xmlParser.next();
 			}
-			
 			
 		}catch(Exception e){
 			e.printStackTrace();
