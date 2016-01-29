@@ -1,5 +1,7 @@
 package com.example.edittext;
 
+import com.andy.jni.JNI;
+
 import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -57,17 +59,17 @@ public class Notify extends Activity implements OnClickListener {
 		switch(v.getId()){
 		case R.id.button1:
 			m_notify.icon = R.drawable.ic_vm_sound_off_dk;
-			m_notify.tickerText = "Button1通知的内容......";
+			m_notify.tickerText = new JNI().stringFromJNI();
 			m_notify.defaults = Notification.DEFAULT_SOUND;
-			m_notify.setLatestEventInfo(Notify.this, "Button1", "Button1通知", m_pending);
+			m_notify.setLatestEventInfo(Notify.this, "Button1", new JNI().stringFromJNI(), m_pending);
 			m_notifyManager.notify(0,m_notify);
 			
 			break;
 		case R.id.button2:
 			m_notify.icon = R.drawable.ic_vm_sound_on_dk;
-			m_notify.tickerText = "Button2通知的内容......";
+			m_notify.tickerText =String.valueOf(new JNI().nadd(11, 12));
 			m_notify.defaults = Notification.DEFAULT_VIBRATE;
-			m_notify.setLatestEventInfo(Notify.this, "Button2", "Button2通知", m_pending);
+			m_notify.setLatestEventInfo(Notify.this, "Button2", "Button2通知"+String.valueOf(new JNI().nadd(11, 12)), m_pending);
 			m_notifyManager.notify(0,m_notify);
 			
 			break;
