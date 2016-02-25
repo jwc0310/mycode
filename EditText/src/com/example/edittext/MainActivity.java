@@ -130,7 +130,6 @@ public class MainActivity extends Activity {
 				Intent toPro = new Intent();
 				toPro.setClass(MainActivity.this, Probar.class);
 				startActivity(toPro);
-				//MainActivity.this.finish();
 				break;
 			case R.id.SeekBar:
 				Intent toSeek = new Intent();
