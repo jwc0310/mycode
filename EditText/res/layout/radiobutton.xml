@@ -27,12 +27,16 @@
             android:id="@+id/RadioButton2"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
+        	android:button="@null"
         	android:text="BB" />
         
         <RadioButton 
             android:id="@+id/RadioButton3"
         	android:layout_width="wrap_content"
         	android:layout_height="wrap_content"
+        	android:button="@null"
+        	android:drawableTop="@drawable/a2"
+        	android:drawablePadding="9dp"
         	android:text="CC" />
         
         <RadioButton 

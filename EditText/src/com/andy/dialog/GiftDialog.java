@@ -3,6 +3,8 @@ package com.andy.dialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.edittext.R;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;

@@ -20,6 +20,9 @@
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:button="@null"
+        android:drawableTop="@drawable/a2"
+        android:drawablePadding="5dp"
         android:text="BB" />
 
     <CheckBox
