@@ -3,8 +3,6 @@ package com.andy.dialog;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.edittext.R;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -32,19 +30,23 @@ public class GiftDialog extends Dialog {
 	private int myCount = 100; //我的拥有的豆数
 	private boolean isRecharge = false; //是否需要充值，默认不需要 fasle，
 	public GiftDialog(Context context) {
-		super(context);
+		//super(context);
+		super(context,R.style.giftDialog);
 		// TODO Auto-generated constructor stub
+		this.mContext = context;
+	}
+	
+	public GiftDialog(Context context, int theme){
+		super(context,theme);
 		this.mContext = context;
 	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.dialog_select_gift);
-		
 		initGiftData();
-		
 		initView();
 	}
 	
@@ -68,8 +70,8 @@ public class GiftDialog extends Dialog {
 			
 			//imageView.setId(i);
 			
-			imageView.setImageResource(giftList.get(i).picId);
-			tv.setText(giftList.get(i).name);
+			imageView.setImageResource(giftList.get(i).getId());
+			tv.setText(giftList.get(i).getName());
 			
 			imageView.setOnClickListener(new View.OnClickListener() {
 			
@@ -78,9 +80,9 @@ public class GiftDialog extends Dialog {
 					LogUtil.e(tag, Integer.toString(v.getId()));
 					clearSelectedMark();
 					((ImageView)v).setImageResource(R.drawable.gift_m_sele);
-					giftDesc.setText(tmp.desc);
-					giftPrice.setText(Integer.toString(tmp.price));
-					count = tmp.price;
+					giftDesc.setText(tmp.getDesc());
+					giftPrice.setText(tmp.getPrice()+"豆");
+					count = tmp.getPrice();
 					
 					//重新选择礼物时，重置send按钮，及其复位判断充值标记位isRecharge
 					gift_send_b.setText("送!");
@@ -199,7 +201,6 @@ public class GiftDialog extends Dialog {
 		LinearLayout rootView = (LinearLayout)findViewById(R.id.idolpro_diag_gift_ll);
 		for(int i=0;i<rootView.getChildCount()-1;i++)
 			((ImageView)rootView.getChildAt(i).findViewById(R.id.activity_gift_img)).setImageResource(R.drawable.gift_m);
-		
 	}
 	
 	private void initGiftData(){
