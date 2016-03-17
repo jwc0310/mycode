@@ -1,0 +1,40 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="textsize17">17sp</dimen>
+    <dimen name="textsize15">15sp</dimen>
+    <dimen name="textsize16">16sp</dimen>
+    <dimen name="textsize14">14sp</dimen>
+    <dimen name="textsize13">13sp</dimen>
+    <dimen name="textsize12">12sp</dimen>
+    <dimen name="textsize10">10sp</dimen>
+    <dimen name="textsize9">9sp</dimen>
+    <dimen name="textsize7">7sp</dimen>
+    
+    <dimen name="tab_height">50dp</dimen>
+    <!-- 450 500 500可以出现中间插一段，原理不明，下个版本再说 -->
+    <dimen name="imageview_height">380dp</dimen>
+    <dimen name="header_height">430dp</dimen>
+    <dimen name="min_header_height">430dp</dimen>
+    
+    <dimen name="textview_width">190dp</dimen>
+    <dimen name="textview_height">200dp</dimen>
+    
+    <dimen name="image_personal">200dp</dimen>
+    <dimen name="temp_height">266dp</dimen>
+    
+    <dimen name="back_image">270dp</dimen>
+    
+    
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
+
+    <integer name="default_circle_indicator_orientation">0</integer>
+    <dimen name="header_textview_margintop">118dp</dimen>
+    <dimen name="header_img_height">130dp</dimen>
+	<dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+</resources>
