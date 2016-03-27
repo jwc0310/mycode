@@ -69,7 +69,7 @@
 		        android:layout_alignParentLeft="true"
 		        android:layout_alignRight="@+id/date"
 		        android:layout_below="@+id/date"
-		        android:text="exit" />
+		        android:text="ListView" />
 	
 		    <Button
 		        android:id="@+id/date"

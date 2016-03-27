@@ -3,6 +3,9 @@ package com.andy.dialog;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.andy.utils.LogUtil;
+import com.example.edittext.R;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -31,7 +34,7 @@ public class GiftDialog extends Dialog {
 	private boolean isRecharge = false; //是否需要充值，默认不需要 fasle，
 	public GiftDialog(Context context) {
 		//super(context);
-		super(context,R.style.giftDialog);
+		super(context);
 		// TODO Auto-generated constructor stub
 		this.mContext = context;
 	}

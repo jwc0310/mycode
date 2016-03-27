@@ -82,7 +82,8 @@ public class MainActivity extends Activity {
 				//MainActivity.this.finish();
 				break;
 			case R.id.exit:
-				MainActivity.this.finish();
+//				MainActivity.this.finish();
+				startActivity(new Intent(MainActivity.this,ListViewWithAnimation.class));
 				break;
 			case R.id.menu:
 				Intent toMenu = new Intent();

@@ -2,4 +2,6 @@
 <resources>
 	<color name="pie_button_bg">#aa001122</color>
     <color name="pie_button_pressed">#aae39a25</color>
+    <color name="idolproj_gray_b_line">#aae39025</color>
+    <color name="idolproj_transparent">#aae39025</color>
 </resources>

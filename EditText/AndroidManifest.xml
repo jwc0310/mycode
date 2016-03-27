@@ -91,6 +91,7 @@
         <!-- android:process=":remote" specify this service run in another process in the same application -->
         <activity android:name="com.andy.opensource.fw.imageloader.ImageLoaderDemo"></activity>
         <activity android:name="com.andy.opensource.fw.imageloader.ImageListActivity"></activity>
+        <activity android:name="ListViewWithAnimation"></activity>
         
     </application>
 

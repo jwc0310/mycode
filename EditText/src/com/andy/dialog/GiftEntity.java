@@ -1,4 +1,4 @@
-package com.example.fortestensure;
+package com.andy.dialog;
 
 public class GiftEntity {
 	private GiftData data;
