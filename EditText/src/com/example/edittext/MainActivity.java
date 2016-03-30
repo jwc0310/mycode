@@ -1,27 +1,20 @@
 package com.example.edittext;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+import com.andy.custom.views.CustomViews;
 import com.andy.opensource.fw.imageloader.ImageLoaderDemo;
 import com.andy.utils.LG;
 import com.andy.utils.json.LearnJSON;
 import com.example.binderservice.BinderService;
 import com.example.media.MainMediaActivity;
 import com.example.net.NetActivity;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnKeyListener;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -31,7 +24,7 @@ public class MainActivity extends Activity {
 	private Button proBar,seekBar,notify,proDia;
 	private Button get,tab,tabwid,chapter,chapter8;
 	private Button media,fragment,binder,json;
-	private Button ImageLoader;
+	private Button ImageLoader,customViews;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,6 +189,10 @@ public class MainActivity extends Activity {
 				Log.i("Andy", "json");
 				startActivity(new Intent(MainActivity.this,LearnJSON.class));
 				break;
+			case R.id.customViews:
+				Log.i("Andy", "json");
+				startActivity(new Intent(MainActivity.this,CustomViews.class));
+				break;
 			default:
 				break;
 			}
@@ -232,7 +229,9 @@ public class MainActivity extends Activity {
          binder = (Button)findViewById(R.id.binderservice);
          json = (Button)findViewById(R.id.json);
          ImageLoader = (Button)findViewById(R.id.ImageLoader);
+         customViews = (Button)findViewById(R.id.customViews);
          ImageLoader.setOnClickListener(button);
+         customViews.setOnClickListener(button);
          
          radio.setOnClickListener(button);
          checkbox.setOnClickListener(button);

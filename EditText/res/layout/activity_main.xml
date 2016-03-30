@@ -273,9 +273,19 @@
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
 		        android:layout_alignParentLeft="true"
-		        android:layout_alignRight="@+id/binderservice"
-		        android:layout_below="@+id/binderservice"
+		        android:layout_alignRight="@id/binderservice"
+		        android:layout_below="@id/binderservice"
 		        android:text="JsonXml" />
+
+		    <Button
+		        android:id="@+id/customViews"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_alignRight="@id/json"
+		        android:layout_below="@id/json"
+		        android:layout_centerHorizontal="true"
+		        android:text="In-Depth" />
 
 		</RelativeLayout>
     

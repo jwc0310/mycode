@@ -7,4 +7,9 @@
     <dimen name="textsize12">12sp</dimen>
     <dimen name="textsize14">14sp</dimen>
     <dimen name="textsize17">17sp</dimen>
+    
+    <bool name="default_circle_indicator_centered">true</bool>
+    <bool name="default_circle_indicator_snap">false</bool>
+    <dimen name="default_circle_indicator_radius">3dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">1dp</dimen>
 </resources>

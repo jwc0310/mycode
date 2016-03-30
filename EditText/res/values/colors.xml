@@ -4,4 +4,9 @@
     <color name="pie_button_pressed">#aae39a25</color>
     <color name="idolproj_gray_b_line">#aae39025</color>
     <color name="idolproj_transparent">#aae39025</color>
+    
+    
+    <color name="default_circle_indicator_stroke_color">#ffffff</color><!-- 边框 -->
+    <color name="default_circle_indicator_fill_color">#ffffff</color><!-- 选中 -->
+    <color name="default_circle_indicator_page_color">#000000</color><!-- 未选中 -->
 </resources>
