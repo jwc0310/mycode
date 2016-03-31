@@ -92,6 +92,7 @@
         <activity android:name="com.andy.opensource.fw.imageloader.ImageLoaderDemo"></activity>
         <activity android:name="com.andy.opensource.fw.imageloader.ImageListActivity"></activity>
         <activity android:name="ListViewWithAnimation"></activity>
+        <activity android:name="com.andy.custom.views.CustomViews"></activity>
         
     </application>
 
