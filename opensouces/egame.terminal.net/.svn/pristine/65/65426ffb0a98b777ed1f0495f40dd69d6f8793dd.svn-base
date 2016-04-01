@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Thu Jul 24 10:59:45 CST 2014
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=/Users/Hein/svn/egame.terminal.net/egame.lib.net_140724_release.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=true
+onejar.expand=
+excludes=<po|egame.terminal.net>~cn/~egame/~terminal/~net/~test/;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~BuildConfig.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$attr.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$drawable.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$id.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$layout.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$string.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R$style.class;<po|egame.terminal.net>~cn/~egame/~terminal/~net/~R.class;<jar|annotations.jar>
+includes=
