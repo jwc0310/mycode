@@ -3,3 +3,11 @@
 ./fortestensure/bin/*
 ./MySocket/bin/*
 ./PullToRefreshAndLoad-2.0/bin/*
+
+*.class
+*.apk
+*/bin/
+*/gen/
+bin/
+gen/
+
