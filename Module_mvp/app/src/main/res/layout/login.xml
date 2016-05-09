@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@mipmap/loginbg"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_country"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/regsiter_icon_dizhi" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@id/iv_country"
+            android:background="@drawable/idolpro_list_bg" >
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:singleLine="true"
+                android:text="国家和地区  中国"
+                android:textColor="@color/idolproj_black_a"
+                android:textSize="@dimen/textsize14" />
+
+            <ImageView
+                android:id="@+id/iv_country_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@mipmap/icon_w01_jiantou" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/idolpro_list_line" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_phone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/layout_country"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/phone" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginLeft="12dp"
+            android:layout_toRightOf="@+id/iv_phone" >
+
+            <TextView
+                android:id="@+id/tv_countrynumb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="+86"
+                android:textColor="@color/idolproj_black_a"
+                android:textSize="@dimen/textsize14" />
+
+            <EditText
+                android:id="@+id/et_phone"
+                android:maxLength="11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12dp"
+                android:layout_toLeftOf="@+id/tv_codebtn"
+                android:layout_toRightOf="@id/tv_countrynumb"
+                android:background="@null"
+                android:hint="@string/login_hint_phone"
+                android:inputType="phone"
+                android:textColor="@color/idolproj_black_a"
+                android:textColorHint="@color/idolproj_gray_a"
+                android:textSize="@dimen/textsize14" />
+
+            <Button
+                android:id="@+id/tv_codebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/login_getcode"
+                android:background="@null"
+                android:textColor="@color/idolproj_green_a"
+                android:textSize="@dimen/textsize12" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/idolpro_list_line" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_code"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/layout_phone"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/regsiter_icon_yanzhen" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="12dp"
+            android:background="@drawable/idolpro_list_bg"
+            android:layout_toRightOf="@id/iv_code" >
+
+            <EditText
+                android:id="@+id/et_code"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="@string/login_hint_code"
+                android:inputType="numberSigned"
+                android:textColor="@color/idolproj_black_a"
+                android:textColorHint="@color/idolproj_gray_a"
+                android:textSize="@dimen/textsize14" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@mipmap/idolpro_list_line" >
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_error"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/layout_code"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/regsiter_msg" />
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/iv_error"
+            android:text="验证码错误！"
+            android:textColor="@color/idolproj_red_a"
+            android:textSize="@dimen/textsize12" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_error"
+        layout="@layout/include_login_loginbtn" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_login"
+        layout="@layout/include_login_bottom" />
+
+</RelativeLayout>

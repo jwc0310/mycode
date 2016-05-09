@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/idolproj_transparent" />
+
+    <corners
+        android:topLeftRadius="0dp"
+        android:topRightRadius="0dp"
+        android:bottomLeftRadius="7dp"
+        android:bottomRightRadius="7dp"
+         />
+
+    <stroke
+        android:width="0.3dp"
+        android:color="@color/idolproj_gray_b_line" />
+
+</shape>

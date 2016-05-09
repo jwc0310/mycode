@@ -8,4 +8,155 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="IdolAppBaseTheme" parent="@android:style/Theme.Light.NoTitleBar">
+    </style>
+
+    <style name="IdolAppBaseThemeWithBackground" parent="IdolAppBaseTheme">
+        <item name="android:windowBackground">@mipmap/idolproject</item>
+    </style>
+
+    <style name="IdolAppBaseThemeTransparentBackground" parent="IdolAppBaseTheme">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="MyLoadingDialogStyle">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="main_pop_anim">
+
+        <!-- PopupWindow左右弹出的效果 -->
+        <item name="android:windowEnterAnimation">@anim/anim_in_bottomtotop</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_toptobottom</item>
+    </style>
+
+    <style name="pop_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:gravity">bottom</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="TitleStyle">
+
+        <!-- TAB文字大小 -->
+        <item name="android:textSize">@dimen/textsize14</item>
+        <!-- TAB文字颜色 -->
+        <item name="android:textColor">@drawable/indicator_title_color_selector</item>
+    </style>
+
+    <style name="pop_btn">
+        <item name="android:layout_width">335dp</item>
+        <item name="android:textSize">@dimen/textsize14</item>
+        <item name="android:background">@drawable/idolpro_dialog_btn</item>
+    </style>
+
+    <style name="login_button">
+        <item name="android:background">@drawable/idolpro_btn_select</item>
+        <item name="android:textColor">@color/idolproj_black_a</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="message_image">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">8dp</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="message_righttextviewbg">
+        <item name="android:layout_width">20dp</item>
+        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:background">@mipmap/news_icon_xiaoxishu</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/idolproj_transparent</item>
+    </style>
+
+    <style name="message_personal_righttextviewbg">
+        <item name="android:layout_width">18dp</item>
+        <item name="android:layout_height">18dp</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">45dp</item>
+        <item name="android:background">@mipmap/news_icon_xiaoxishu</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/idolproj_transparent</item>
+    </style>
+
+    <style name="mProgress_horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar_horizontal</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:paddingRight">-10dp</item>
+        <item name="android:paddingLeft">-10dp</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:maxHeight">5dip</item>
+    </style>
+
+    <style name="mProgress_for_level">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progressbar_horizontal_for_mylevel</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:minHeight">7dip</item>
+        <item name="android:maxHeight">7dip</item>
+    </style>
+
+    <style name="Widget.SeekBar.Normal" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">8.0dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@android:drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/seekbar_horizontal</item>
+        <item name="android:minHeight">8.0dip</item>
+        <item name="android:thumb">@mipmap/weidou_control</item>
+        <item name="android:thumbOffset">10.0dip</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+    <style name="Dialog_Fullscreen">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="commentDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="giftDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="voteSuccessDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
 </resources>

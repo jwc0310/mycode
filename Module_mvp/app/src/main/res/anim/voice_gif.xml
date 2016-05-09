@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+
+    <item
+        android:drawable="@mipmap/voidce0"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce1"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce2"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce3"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce4"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce5"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce6"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce7"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce8"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce9"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce10"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce11"
+        android:duration="100"/>
+    <item
+        android:drawable="@mipmap/voidce12"
+        android:duration="100"/>
+
+</animation-list>

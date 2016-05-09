@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Module_mvp</string>
+
+    <string name="newwork_fail">请求失败</string>
+    <string name="parse_fail">数据解析失败</string>
+    <string name="login">登录</string>
+    <string name="register">注册</string>
+    <string name="login_qq">QQ</string>
+    <string name="login_weixin">微信</string>
+    <string name="login_weibo">新浪微博</string>
+    <string name="login_renren">人人网</string>
+    <string name="login_facebook">Facebook</string>
+    <string name="login_twitter">Twitter</string>
+    <string name="login_hint_phone">请输入手机号</string>
+    <string name="login_getcode">获取验证码</string>
+    <string name="login_hint_code">请输入收到的验证码</string>
+    <string name="register_next">下一步</string>
+    <string name="register_third_upload">点击上传头像</string>
+    <string name="register_third_hint">请输入昵称</string>
+    <string name="register_third_man">男</string>
+    <string name="register_third_woman">女</string>
+    <string name="register_third_done">完成</string>
+    <string name="register_success_msg">恭喜你！注册成功啦～～</string>
+    <string name="register_success_return">返回登录前页面</string>
+    <string name="register_success_apply">申请练习生></string>
+    <string name="getcode_success">验证码已发送，请注意查收</string>
+    <string name="idolpro_take_phote">相机拍摄</string>
+    <string name="idolpro_use_album">手机相册</string>
+    <string name="personalapply"><Data><![CDATA[本人对该作品拥有所有权，并且愿意遵守<font color="#ff0000"><b><a href="www.baidu.com">《偶像计划投稿须知》</a></b></font>]]></Data></string>
+
+    <string name="feedbackhint">请描述您的问题或建议，您的每条反馈我们都会仔细阅读，但我们无法保障每一条都能及时回复。填写您的联系方式，可以让客服娘联系您</string>
+
+
+    <string name="resoume_upload">啊呀断掉了！休息一会再点一次继续传吧！</string>
 </resources>
