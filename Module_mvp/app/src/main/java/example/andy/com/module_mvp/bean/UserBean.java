@@ -8,6 +8,10 @@ public class UserBean {
     private String username;
     private String password;
 
+    public UserBean(){
+
+    }
+
     public UserBean(String username, String password){
         this.username = username;
         this.password = password;

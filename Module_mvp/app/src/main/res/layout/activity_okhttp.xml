@@ -4,19 +4,41 @@
     android:layout_height="match_parent"
     android:id="@+id/rl_okhttp">
 
-    <TextView
-        android:id="@+id/content_okhttp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="hello okhttp"/>
-
-    <Button
-        android:id="@+id/clear_okhttp"
+    <include
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:id="@+id/login"
+        android:layout_centerInParent="true"
+        layout="@layout/include_login"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="clear"/>
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        >
+
+        <Button
+            android:id="@+id/clear_okhttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="clear"/>
+
+        <Button
+            android:id="@+id/login_okhttp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:text="login"/>
+
+    </LinearLayout>
+
 
 
 </RelativeLayout>

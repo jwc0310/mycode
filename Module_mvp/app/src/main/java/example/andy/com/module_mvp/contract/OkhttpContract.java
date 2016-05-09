@@ -12,7 +12,8 @@ public interface OkhttpContract {
     }
 
     interface Presenter extends BasePresenter{
-
+        void login();
+        void clear();
     }
 
 }

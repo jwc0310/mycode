@@ -5,9 +5,6 @@ import example.andy.com.module_mvp.contract.OkhttpContract;
 /**
  * Created by chenjianwei on 16/5/9.
  */
-public class OkhttpPresenter implements OkhttpContract.Presenter {
-    @Override
-    public void start() {
+public interface OkhttpPresenter extends OkhttpContract.Presenter {
 
-    }
 }
