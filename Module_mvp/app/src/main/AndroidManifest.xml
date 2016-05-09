@@ -17,6 +17,9 @@
         </activity>
 
         <activity android:name=".view.OkhttpActivity"></activity>
+        <activity android:name=".Okhttp"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>

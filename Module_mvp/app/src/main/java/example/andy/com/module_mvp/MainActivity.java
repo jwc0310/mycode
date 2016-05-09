@@ -20,6 +20,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void initView(){
         findViewById(R.id.button_okhttp).setOnClickListener(this);
+        findViewById(R.id.button_okhttp2).setOnClickListener(this);
+
     }
 
     /**
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = v.getId();
         if (id == R.id.button_okhttp){
             startActivity(new Intent(this, OkhttpActivity.class));
+        }else if(id == R.id.button_okhttp2){
+            startActivity(new Intent(this, Okhttp.class));
         }
     }
 }
